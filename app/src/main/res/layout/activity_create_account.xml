@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity_createAccount">
+
+    <ImageView
+        android:id="@+id/img_backButton_createaccount"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="300dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/backbutton" />
+
+
+    <ImageView
+        android:id="@+id/Loading_logo"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_backButton_createaccount"
+        app:srcCompat="@drawable/icon" />
+
+    <EditText
+        android:id="@+id/et_firstName_createAccount"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/custom_edittext"
+        android:ems="10"
+        android:hint="First Name"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/Loading_logo"
+        app:layout_constraintStart_toStartOf="@+id/Loading_logo"
+        app:layout_constraintTop_toBottomOf="@+id/Loading_logo" />
+
+    <EditText
+        android:id="@+id/et_lastName_createaccount"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/custom_edittext"
+        android:ems="10"
+        android:hint="LastName"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/et_firstName_createAccount"
+        app:layout_constraintStart_toStartOf="@+id/et_firstName_createAccount"
+        app:layout_constraintTop_toBottomOf="@+id/et_firstName_createAccount" />
+
+    <EditText
+        android:id="@+id/et_emailAddress_createaccount"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/custom_edittext"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="Email Address"
+        app:layout_constraintEnd_toEndOf="@+id/et_lastName_createaccount"
+        app:layout_constraintStart_toStartOf="@+id/et_lastName_createaccount"
+        app:layout_constraintTop_toBottomOf="@+id/et_lastName_createaccount" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_Password_LogIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:hintEnabled="false"
+        app:layout_constraintEnd_toEndOf="@+id/et_emailAddress_createaccount"
+        app:layout_constraintStart_toStartOf="@+id/et_emailAddress_createaccount"
+        app:layout_constraintTop_toBottomOf="@+id/et_emailAddress_createaccount"
+        app:passwordToggleEnabled="true">
+
+        <EditText
+            android:id="@+id/et_password_creataccount"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/custom_edittext"
+            android:ems="10"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:paddingLeft="15dp"
+            android:textSize="18sp"
+            tools:layout_editor_absoluteX="42dp"
+            tools:layout_editor_absoluteY="354dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_confirm_password_LogIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:hintEnabled="false"
+        app:layout_constraintEnd_toEndOf="@+id/til_Password_LogIn"
+        app:layout_constraintStart_toStartOf="@+id/til_Password_LogIn"
+        app:layout_constraintTop_toBottomOf="@+id/til_Password_LogIn"
+        app:passwordToggleEnabled="true"
+        tools:ignore="MissingConstraints">
+
+        <EditText
+            android:id="@+id/et_confirmPassword_creataccount"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/custom_edittext"
+            android:ems="10"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:paddingLeft="15dp"
+            android:textSize="18sp"
+            tools:layout_editor_absoluteX="42dp"
+            tools:layout_editor_absoluteY="354dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <Button
+        android:id="@+id/btn_createAccount_createaccount"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="25dp"
+        android:text="Create Account"
+        app:layout_constraintEnd_toEndOf="@+id/til_confirm_password_LogIn"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/til_confirm_password_LogIn"
+        app:layout_constraintTop_toBottomOf="@+id/til_confirm_password_LogIn" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

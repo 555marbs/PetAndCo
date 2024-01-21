@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity_login">
+
+    <EditText
+        android:id="@+id/et_email_logInPage"
+        android:layout_width="327dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/custom_edittext"
+        android:ems="10"
+        android:hint="Email"
+        android:textSize="18sp"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo_activityMain" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_Password_LogIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:hintEnabled="false"
+        app:layout_constraintEnd_toEndOf="@+id/et_email_logInPage"
+        app:layout_constraintStart_toStartOf="@+id/et_email_logInPage"
+        app:layout_constraintTop_toBottomOf="@+id/et_email_logInPage"
+        app:passwordToggleEnabled="true">
+
+        <EditText
+            android:id="@+id/et_passwordLogIn"
+            android:layout_width="327dp"
+            android:layout_height="60dp"
+            android:background="@drawable/custom_edittext"
+            android:ems="10"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:paddingLeft="15dp"
+            android:textSize="18sp"
+            tools:layout_editor_absoluteX="42dp"
+            tools:layout_editor_absoluteY="354dp" />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageView
+        android:id="@+id/logo_activityMain"
+        android:layout_width="300dp"
+        android:layout_height="97dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.18"
+        app:srcCompat="@drawable/icon" />
+
+    <Button
+        android:id="@+id/btn_loginbt_login"
+        android:layout_width="325dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/custom_button"
+        android:text="LOG IN"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tv_forgotPassword_login"
+        app:layout_constraintTop_toBottomOf="@+id/tv_forgotPassword_login" />
+
+    <TextView
+        android:id="@+id/tv_forgotPassword_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Forgot Password"
+        app:layout_constraintStart_toStartOf="@+id/til_Password_LogIn"
+        app:layout_constraintTop_toBottomOf="@+id/til_Password_LogIn" />
+
+    <Button
+        android:id="@+id/btn_signUp_login"
+        android:layout_width="325dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/custom_button"
+        android:text="SIGN UP"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/btn_loginbt_login"
+        app:layout_constraintStart_toStartOf="@+id/btn_loginbt_login"
+        app:layout_constraintTop_toBottomOf="@+id/btn_loginbt_login" />
+</androidx.constraintlayout.widget.ConstraintLayout>
