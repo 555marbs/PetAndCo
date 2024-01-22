@@ -11,6 +11,7 @@ class activity_login : AppCompatActivity() {
 
     private lateinit var btSignUp: Button
     private lateinit var tvForgotPassword: TextView
+    private lateinit var btlogin : Button
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,10 +19,16 @@ class activity_login : AppCompatActivity() {
 
         btSignUp = findViewById(R.id.btn_signUp_login)
         tvForgotPassword = findViewById(R.id.tv_forgotPassword_login)
+        btlogin = findViewById(R.id.btn_loginbt_login)
 
         //Going to Creating An Account
        btSignUp.setOnClickListener {
             val intent = Intent(this, activity_createAccount::class.java)
+            startActivity(intent)
+        }
+
+        btlogin.setOnClickListener {
+            val intent = Intent(this,ptHomePage::class.java)
             startActivity(intent)
         }
 
