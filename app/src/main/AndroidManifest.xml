@@ -13,6 +13,9 @@
         android:theme="@style/Theme.PetCo"
         tools:targetApi="31">
         <activity
+            android:name=".activity_myprofile"
+            android:exported="false" />
+        <activity
             android:name=".ptHomePage"
             android:exported="false" />
         <activity
