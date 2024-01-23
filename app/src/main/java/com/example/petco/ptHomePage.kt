@@ -20,7 +20,7 @@ class ptHomePage : AppCompatActivity() {
 
         recyclerView = findViewById<View>(R.id.rvpthomepage) as RecyclerView
         recyclerViewHomepageAdapter = RecyclerViewHomePageAdapter(this@ptHomePage, ptList)
-        val layoutManager: RecyclerView.LayoutManager = GridLayoutManager(this, 2)
+        val layoutManager: RecyclerView.LayoutManager = GridLayoutManager(this, 1)
         recyclerView!!.layoutManager = layoutManager
         recyclerView!!.adapter = recyclerViewHomepageAdapter
 
@@ -29,20 +29,20 @@ class ptHomePage : AppCompatActivity() {
     }
 
     private fun preparePtListData() {
-        var pet = HomePageDataClass("Cat", R.drawable.chihuahua)
+        var pet = HomePageDataClass("Cat", "Cat, (Felis catus), domesticated member of the family Felidae,\n" +
+                "order Carnivora",R.drawable.chihuahua)
         ptList.add(pet)
-        pet = HomePageDataClass("Cat", R.drawable.cat)
+        pet = HomePageDataClass("Cat","Dog, (Felis catus), domesticated member of the family Felidae,\n" +
+                " order Carnivora", R.drawable.cat)
         ptList.add(pet)
-        pet = HomePageDataClass("Cat", R.drawable.cat)
+        pet = HomePageDataClass("Cat","Bird, (Felis catus), domesticated member of the family Felidae,\n" +
+                "  order Carnivora", R.drawable.cat)
         ptList.add(pet)
-        pet = HomePageDataClass("Cat", R.drawable.cat)
+        pet = HomePageDataClass("Rabbit","(Felis catus), domesticated member of the family Felidae,\n" +
+                "  order Carnivora", R.drawable.cat)
         ptList.add(pet)
-        pet = HomePageDataClass("Cat", R.drawable.cat)
-        ptList.add(pet)
-        pet = HomePageDataClass("Cat", R.drawable.cat)
-        ptList.add(pet)
-        pet = HomePageDataClass("Cat", R.drawable.cat)
-        ptList.add(pet)
+        pet = HomePageDataClass("Cat", "Cat, (Felis catus), domesticated member of the family Felidae,\n" +
+                "  order Carnivora",R.drawable.cat)
 
 
     }
