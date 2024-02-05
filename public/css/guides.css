@@ -1,0 +1,14 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill);
+    gap: 20px;
+}
+.grid-item {
+    text-align: center;
+}
+
+.grid-item img {
+    max-width: 70%;
+    height: auto;
+
+}
