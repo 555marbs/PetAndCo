@@ -1,47 +1,33 @@
-<x-guest-layout>
-    <!-- Session Status -->
-    <x-auth-session-status class="mb-4" :status="session('status')" />
+@extends('layouts.app')
 
-    <form method="POST" action="{{ route('login') }}">
-        @csrf
+@section('styles')
+<link rel="stylesheet" href="{{ asset('css/login.css') }}" @endsection
 
-        <!-- Email Address -->
-        <div>
-            <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
-            <x-input-error :messages="$errors->get('email')" class="mt-2" />
-        </div>
+<div class="az-signin-wrapper">
+    <div class="az-card-signin">
+      <h1 class="az-logo">Pet&Co.</h1>
+      <div class="az-signin-header">
+        <h2>Welcome back!</h2>
+        <h4>Please sign in to continue</h4>
 
-        <!-- Password -->
-        <div class="mt-4">
-            <x-input-label for="password" :value="__('Password')" />
+        <form action="{{ route('login') }}" method="POST">
+          @csrf <!-- Generates CSRF token field -->
 
-            <x-text-input id="password" class="block mt-1 w-full"
-                            type="password"
-                            name="password"
-                            required autocomplete="current-password" />
+          <div class="form-group">
+            <label>Email</label>
+            <input type="text" class="form-control" name="email" placeholder="Enter your email">
+          </div><!-- form-group -->
+          <div class="form-group">
+            <label>Password</label>
+            <input type="password" class="form-control" name="password" placeholder="Enter your password">
+          </div><!-- form-group -->
+          <button type="submit" class="btn btn-az-primary btn-block">Sign In</button>
+        </form>
+      </div><!-- az-signin-header -->
+      <div class="az-signin-footer">
+        <p><a href="">Forgot password?</a></p>
+        <p>Don't have an account? <a href="{{ route('register') }}">Create an Account</a></p>
+      </div><!-- az-signin-footer -->
+    </div><!-- az-card-signin -->
+  </div><!-- az-signin-wrapper -->
 
-            <x-input-error :messages="$errors->get('password')" class="mt-2" />
-        </div>
-
-        <!-- Remember Me -->
-        <div class="block mt-4">
-            <label for="remember_me" class="inline-flex items-center">
-                <input id="remember_me" type="checkbox" class="rounded dark:bg-gray-900 border-gray-300 dark:border-gray-700 text-indigo-600 shadow-sm focus:ring-indigo-500 dark:focus:ring-indigo-600 dark:focus:ring-offset-gray-800" name="remember">
-                <span class="ms-2 text-sm text-gray-600 dark:text-gray-400">{{ __('Remember me') }}</span>
-            </label>
-        </div>
-
-        <div class="flex items-center justify-end mt-4">
-            @if (Route::has('password.request'))
-                <a class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800" href="{{ route('password.request') }}">
-                    {{ __('Forgot your password?') }}
-                </a>
-            @endif
-
-            <x-primary-button class="ms-3">
-                {{ __('Log in') }}
-            </x-primary-button>
-        </div>
-    </form>
-</x-guest-layout>
