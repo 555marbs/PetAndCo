@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #B19470;" style="color: white">
-    <a class="navbar-brand" href="{{ route('dashboard') }}">Pet&Co.</a>
+    <a class="navbar-brand" href="{{ route('home') }}">Pet&Co.</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -7,7 +7,7 @@
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item" style="text-emphasis-color: rgb(0, 0, 0)">
-                <a class="nav-link" href="{{ route('dashboard') }}">Home</a>
+                <a class="nav-link" href="{{ route('home') }}">Home</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('guides') }}">Guides</a>

@@ -13,7 +13,7 @@
             <div class="dropdown">
                 <!-- Dropdown content for button 1 -->
                 <h4>Breeds of Dogs</h4>
-                <a href="{{ route('dashboard') }}">Chihuahua</a>
+                <a href="{{ route('home') }}">Chihuahua</a>
                 <p>Corgi</p>
                 <p>Dalmatian</p>
                 <p>Golden Retriever</p>
