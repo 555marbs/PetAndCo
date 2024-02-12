@@ -1,10 +1,13 @@
 package com.example.petco
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import androidx.recyclerview.widget.GridLayoutManager
+import androidx.cardview.widget.CardView
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.petco.CATSCATEGORY.CatsCategories
 
 class ptHomePage : AppCompatActivity() {
 
@@ -12,38 +15,67 @@ class ptHomePage : AppCompatActivity() {
     private  var recyclerViewHomepageAdapter: RecyclerViewHomePageAdapter? = null
     private var ptList = mutableListOf<HomePageDataClass>()
 
+    private lateinit var cvDog : CardView
+    private lateinit var cvCat : CardView
+    private lateinit var cvBird : CardView
+    private lateinit var cvRabbit : CardView
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_pt_home_page)
 
-        ptList = ArrayList()
+        cvCat = findViewById(R.id.cvCat)
+        cvCat.setOnClickListener{
+            val int = Intent(this, CatsCategories::class.java)
+            startActivity(int)
+            finish()
+        }
 
+
+        cvDog = findViewById(R.id.cvDog)
+        cvDog.setOnClickListener{
+            val int = Intent(this,DogsCategories::class.java)
+            startActivity(int)
+            finish()
+        }
+
+        cvBird = findViewById(R.id.cvBird)
+        cvBird.setOnClickListener {
+            val int = Intent(this, BirdsCategories::class.java)
+            startActivity(int)
+            finish()
+
+        }
+        cvRabbit = findViewById(R.id.cvRabbit)
+        cvRabbit.setOnClickListener {
+            val int = Intent(this, RabbitCategories::class.java)
+            startActivity(int)
+            finish()
+        }
+
+
+        ptList = ArrayList()
         recyclerView = findViewById<View>(R.id.rvpthomepage) as RecyclerView
         recyclerViewHomepageAdapter = RecyclerViewHomePageAdapter(this@ptHomePage, ptList)
-        val layoutManager: RecyclerView.LayoutManager = GridLayoutManager(this, 1)
+        val layoutManager: RecyclerView.LayoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         recyclerView!!.layoutManager = layoutManager
         recyclerView!!.adapter = recyclerViewHomepageAdapter
 
-        preparePtListData()
+        recyclerHomePageVertical()
 
     }
 
-    private fun preparePtListData() {
-        var pet = HomePageDataClass("Cat", "Cat, (Felis catus), domesticated member of the family Felidae,\n" +
-                "order Carnivora",R.drawable.chihuahua)
+    private fun  recyclerHomePageVertical() {
+        var pet = HomePageDataClass("Cat british", "Cat, (Felis catus), domesticated member of the family Felidae",R.drawable.catcare)
         ptList.add(pet)
-        pet = HomePageDataClass("Cat","Dog, (Felis catus), domesticated member of the family Felidae,\n" +
-                " order Carnivora", R.drawable.cat)
+        pet = HomePageDataClass("Cat maine coon","Dog, (Felis catus), domesticated member of the family Felidae", R.drawable.catbackground)
         ptList.add(pet)
-        pet = HomePageDataClass("Cat","Bird, (Felis catus), domesticated member of the family Felidae,\n" +
-                "  order Carnivora", R.drawable.cat)
+        pet = HomePageDataClass("Cat dog","Dog, (Felis catus), domesticated member of the family Felidae", R.drawable.rabbit)
         ptList.add(pet)
-        pet = HomePageDataClass("Rabbit","(Felis catus), domesticated member of the family Felidae,\n" +
-                "  order Carnivora", R.drawable.cat)
+        pet = HomePageDataClass("Cat trin","Dog, (Felis catus), domesticated member of the family Felidae", R.drawable.dogcategory)
         ptList.add(pet)
-        pet = HomePageDataClass("Cat", "Cat, (Felis catus), domesticated member of the family Felidae,\n" +
-                "  order Carnivora",R.drawable.cat)
-
-
+        pet = HomePageDataClass("Cat bernardo","Dog, (Felis catus), domesticated member of the family Felidae", R.drawable.cat)
+        ptList.add(pet)
     }
 }

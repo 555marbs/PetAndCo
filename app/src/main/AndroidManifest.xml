@@ -13,6 +13,30 @@
         android:theme="@style/Theme.PetCo"
         tools:targetApi="31">
         <activity
+            android:name=".CATSCATEGORY.CatsGrooming"
+            android:exported="false" />
+        <activity
+            android:name=".CATSCATEGORY.CatBreads"
+            android:exported="false" />
+        <activity
+            android:name=".CATSCATEGORY.CatGuides"
+            android:exported="false" />
+        <activity
+            android:name=".CATSCATEGORY.CatsExplore"
+            android:exported="false" />
+        <activity
+            android:name=".RabbitCategories"
+            android:exported="false" />
+        <activity
+            android:name=".BirdsCategories"
+            android:exported="false" />
+        <activity
+            android:name=".CATSCATEGORY.CatsCategories"
+            android:exported="false" />
+        <activity
+            android:name=".DogsCategories"
+            android:exported="false" />
+        <activity
             android:name=".ptHomePage"
             android:exported="false" />
         <activity
