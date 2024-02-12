@@ -1,13 +1,13 @@
 package com.example.petco
 
-import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import androidx.recyclerview.widget.GridLayoutManager
+import androidx.cardview.widget.CardView
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.example.petco.CATSCATEGORY.CatsCategories
 
 class ptHomePage : AppCompatActivity() {
 
@@ -15,68 +15,67 @@ class ptHomePage : AppCompatActivity() {
     private  var recyclerViewHomepageAdapter: RecyclerViewHomePageAdapter? = null
     private var ptList = mutableListOf<HomePageDataClass>()
 
-    //Navigation Purposes
-    private lateinit var bottomNaviation : BottomNavigationView
+    private lateinit var cvDog : CardView
+    private lateinit var cvCat : CardView
+    private lateinit var cvBird : CardView
+    private lateinit var cvRabbit : CardView
 
-    @SuppressLint("MissingInflatedId")
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_pt_home_page)
 
+        cvCat = findViewById(R.id.cvCat)
+        cvCat.setOnClickListener{
+            val int = Intent(this, CatsCategories::class.java)
+            startActivity(int)
+            finish()
+        }
+
+
+        cvDog = findViewById(R.id.cvDog)
+        cvDog.setOnClickListener{
+            val int = Intent(this,DogsCategories::class.java)
+            startActivity(int)
+            finish()
+        }
+
+        cvBird = findViewById(R.id.cvBird)
+        cvBird.setOnClickListener {
+            val int = Intent(this, BirdsCategories::class.java)
+            startActivity(int)
+            finish()
+
+        }
+        cvRabbit = findViewById(R.id.cvRabbit)
+        cvRabbit.setOnClickListener {
+            val int = Intent(this, RabbitCategories::class.java)
+            startActivity(int)
+            finish()
+        }
+
+
         ptList = ArrayList()
-        bottomNaviation = findViewById(R.id.btnav_bottomNavigation)
-
-
         recyclerView = findViewById<View>(R.id.rvpthomepage) as RecyclerView
         recyclerViewHomepageAdapter = RecyclerViewHomePageAdapter(this@ptHomePage, ptList)
-        val layoutManager: RecyclerView.LayoutManager = GridLayoutManager(this, 2)
+        val layoutManager: RecyclerView.LayoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         recyclerView!!.layoutManager = layoutManager
         recyclerView!!.adapter = recyclerViewHomepageAdapter
 
-        preparePtListData()
-
-        bottomNaviation.setOnItemSelectedListener {
-            when(it.itemId){
-//                R.id.home -> {val intent = Intent(this, rvHompagee::class.java)
-//                    startActivity(intent)
-//                    finish()}
-
-//                R.id.search ->{val intent = Intent(this, MarketPlace::class.java)
-//                    startActivity(intent)
-//                    finish()}
-//
-//                R.id.sell_product ->{val intent = Intent(this, AddDetails::class.java)
-//                    startActivity(intent)
-//                    finish()}
-
-                R.id.profile -> {val  intent = Intent(this, activity_myprofile::class.java)
-                    startActivity(intent)
-                    finish()}
-            }
-            true
-        }
+        recyclerHomePageVertical()
 
     }
 
-    private fun preparePtListData() {
-        var pet = HomePageDataClass("Cat", R.drawable.chihuahua)
+    private fun  recyclerHomePageVertical() {
+        var pet = HomePageDataClass("Cat british", "Cat, (Felis catus), domesticated member of the family Felidae",R.drawable.catcare)
         ptList.add(pet)
-        pet = HomePageDataClass("Cat", R.drawable.cat)
+        pet = HomePageDataClass("Cat maine coon","Dog, (Felis catus), domesticated member of the family Felidae", R.drawable.catbackground)
         ptList.add(pet)
-        pet = HomePageDataClass("Cat", R.drawable.cat)
+        pet = HomePageDataClass("Cat dog","Dog, (Felis catus), domesticated member of the family Felidae", R.drawable.rabbit)
         ptList.add(pet)
-        pet = HomePageDataClass("Cat", R.drawable.cat)
+        pet = HomePageDataClass("Cat trin","Dog, (Felis catus), domesticated member of the family Felidae", R.drawable.dogcategory)
         ptList.add(pet)
-        pet = HomePageDataClass("Cat", R.drawable.cat)
+        pet = HomePageDataClass("Cat bernardo","Dog, (Felis catus), domesticated member of the family Felidae", R.drawable.cat)
         ptList.add(pet)
-        pet = HomePageDataClass("Cat", R.drawable.cat)
-        ptList.add(pet)
-        pet = HomePageDataClass("Cat", R.drawable.cat)
-        ptList.add(pet)
-
-
     }
-
-
-
 }
