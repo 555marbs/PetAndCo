@@ -20,7 +20,7 @@ class HomeController extends Controller
             }
             else if($usertype== 'admin')
             {
-                return view('admin.admin-dash');
+                return view('vendor/admin.home');
             }
             else
             {
