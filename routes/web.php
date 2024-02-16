@@ -1,8 +1,11 @@
 <?php
 
+use App\Http\Controllers\Auth\AdminAuthController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,10 +17,9 @@ use App\Http\Controllers\HomeController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
+Route::get('/', [DashboardController::class, 'landing'])->name('landing');
 
-Route::get('/', function () {
-    return view('landing.landing');
-});
 
 Route::get('/guides', function () {
     return view('dashboard.guides');
@@ -43,11 +45,10 @@ Route::get('/fish', function () {
     return view('classification.fish');
 })->name('fish');
 
+Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
 
-
-Route::get('/home', [HomeController::class, 'index'])->middleware('auth')->name('home');
-
-Route::get('post',[HomeController::class, 'post'])->middleware(['auth', 'admin']);
+Route::get('/admin/login', [AdminAuthController::class, 'showLoginForm'])->name('admin.login');
+Route::post('/admin/login', [AdminAuthController::class, 'apiLogin']);
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

@@ -31,3 +31,5 @@
     </div><!-- az-card-signin -->
   </div><!-- az-signin-wrapper -->
 
+  <script src="{{ asset('js/login.js')}}"></script>
+
