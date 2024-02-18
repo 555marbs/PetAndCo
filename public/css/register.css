@@ -1,0 +1,65 @@
+.az-column-signup {
+    background-color: #fff;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+    @media (min-width: 576px) {
+      .az-column-signup {
+        padding: 40px;
+        width: 500px; } }
+    @media (min-width: 992px) {
+      .az-column-signup {
+        border-left: 1px solid #cdd4e0; } }
+
+  .az-signup-header h2 {
+    font-weight: 500;
+    color: #5b47fb;
+    letter-spacing: -1px; }
+
+  .az-signup-header h4 {
+    font-size: 20px;
+    font-weight: 400;
+    color: #1c273c;
+    margin-bottom: 25px; }
+
+  .az-signup-header label {
+    color: #7987a1; }
+
+  .az-signup-header .form-control {
+    color: #1c273c;
+    font-weight: 500;
+    border-width: 2px;
+    border-color: #cdd4e0; }
+    .az-signup-header .form-control:focus {
+      border-color: #b4bdce;
+      box-shadow: none; }
+    .az-signup-header .form-control::placeholder {
+      font-weight: 400;
+      color: #97a3b9; }
+
+  .az-signup-header > .btn {
+    margin-top: 25px; }
+
+  .az-signup-header .row {
+    margin-top: 20px; }
+    .az-signup-header .row > div .btn i {
+      font-size: 15px;
+      line-height: 0;
+      margin-right: 5px; }
+    .az-signup-header .row > div:first-child .btn {
+      background-color: #4267b2;
+      color: #fff; }
+      .az-signup-header .row > div:first-child .btn:hover, .az-signup-header .row > div:first-child .btn:focus {
+        background-color: #375694;
+        color: #fff; }
+
+  .az-signup-footer p {
+    color: #7987a1;
+    margin-bottom: 0; }
+
+  .az-signup-footer a {
+    color: #1c273c;
+    font-weight: 700; }
+    .az-signup-footer a:hover, .az-signup-footer a:focus {
+      color: #5b47fb; }

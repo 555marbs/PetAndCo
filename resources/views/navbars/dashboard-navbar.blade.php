@@ -10,7 +10,7 @@
                 <a class="nav-link" href="{{ route('dashboard') }}">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('guides') }}">Guides</a>
+                <a class="nav-link" href="{{ url('/guides') }}">Guides</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('categories') }}">Categories</a>
