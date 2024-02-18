@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdoptionController;
 use App\Http\Controllers\Auth\AdminAuthController;
 use App\Http\Controllers\Auth\UserAuthController;
 use App\Http\Controllers\HomeController;
@@ -25,6 +26,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 /* Post */
 Route::resource('post', PostController::class);
+
+Route::resource('adoption', AdoptionController::class);
 
 Route::middleware(['auth:sanctum'])->group(function(){
     Route::post('/logout', [UserAuthController::class, 'logout']);

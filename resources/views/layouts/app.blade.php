@@ -15,11 +15,7 @@
 
 <body>
     <div class="background-image"></div>
-
-    <div class="container">
-        @yield('content')
-    </div>
-   @yield('content')
+    @yield('content')
 </body>
 
 <!-- Scripts -->
