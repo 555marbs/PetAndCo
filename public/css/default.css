@@ -1,15 +1,6 @@
 body {
-    background-color: #B19470;
-
-}
-.background-image{
-    background-image: url(public/img/homebackground.jpg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 200px;
-    height: 100vh;
-
-
+    background-image: url('/img/sheshable bg.jpg');
+    background-size: cover;
 }
 
 

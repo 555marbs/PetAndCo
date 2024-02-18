@@ -19,24 +19,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-/* Log in
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-}); */
 
 /* Post */
 Route::resource('post', PostController::class);
-
 Route::resource('adoption', AdoptionController::class);
 
+/* Login */
 Route::middleware(['auth:sanctum'])->group(function(){
     Route::post('/logout', [UserAuthController::class, 'logout']);
     Route::get('/loggeduser', [UserAuthController::class, 'logged_user']);
     Route::post('/changepassword', [UserAuthController::class, 'change_password']);
 });
-
-
-
 Route::prefix('api')->group(function () {
     Route::post('/login', [UserAuthController::class, 'login']);
     Route::post('/admin/login', [AdminAuthController::class, 'apiLogin']);
