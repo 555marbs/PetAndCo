@@ -7,14 +7,12 @@
 @endsection
 
 @section('content')
+
+
     <div class="image-container">
+        <h1>Pet&Co.</h1><br>
         <img src="/img/cat2.jpg" alt="Changing Image" class="changing-image" id="changingImage">
-        <p>Lorem ipsum litora mi conubia enim nisi duis senectus <br>
-            aptent arcu elit fusce sociosqu, elit curabitur porttitor<br>
-            curae sodales quisque molestie conubia euismod suscipit<br>
-            massa mattis. Viverra morbi orci nisl a facilisis ad porta<br>
-            adipiscing, vivamus ligula nunc consectetur sagittis<br>
-            placerat magna, platea <br></p>
+        <p>Welcome to Pet and Co, where we celebrate the joy and companionship that pets bring to our lives!  Our website is dedicated to providing a one-stop destination for all things related to your beloved furry friends. Explore a wide range of articles, guides, and resources on pet care, health, training, and nutrition. Whether you are a first-time pet owner or an experienced enthusiast, we have valuable insights to enhance your pet parenting journey.</p>
     </div>
 
     <div class="button-container">
@@ -34,11 +32,6 @@
             <a href="{{ route('fish') }}">
                 <img src="/img/4.png" alt="Button 4">
             </a>
-
-            <a href="link5.html" target="_blank">
-                <img src="/img/4.png" alt="Button 5">
-            </a>
-
         </div>
     </div>
 
