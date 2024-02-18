@@ -7,7 +7,10 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
+    background-image: url('/img/sheshable bg.jpg');
+    background-size: cover;
 }
+  
 
 .image-container {
     display: grid;
@@ -50,7 +53,7 @@ body {
 
 .button-grid {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 20px;
     padding: 20px;
 

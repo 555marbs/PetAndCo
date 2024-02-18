@@ -39,9 +39,6 @@
                 <img src="/img/4.png" alt="Button 5">
             </a>
 
-            <a href="link6.html" target="_blank">
-                <img src="/img/4.png" alt="Button ">
-            </a>
         </div>
     </div>
 

@@ -1,14 +1,53 @@
+body{
+    background-image: url('/img/sheshable bg.jpg');
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-size: 100% 100%;
+
+}
+
+img {
+    width: 250px;
+    height: 180px;
+    border: 5px solid ;
+    border-radius: 10px;
+   
+  }
 .container {
     display: grid;
     grid-template-columns: repeat(auto-fill);
-    gap: 20px;
+    gap: 0px;
+    
+   
 }
-.grid-item {
+.container .grid-item img {
+   margin-top: 50px;
+   
+}
+
+    
+.grid-item p{
+    text-align: center;
+    height: 20px;
+    width: 200px;
+    background-color: rgb(179, 118, 32);
+    color: black
+    
+
+}
+    
+.grid-item2 p{
     text-align: center;
 }
 
-.grid-item img {
-    max-width: 70%;
-    height: auto;
 
+.grid-item3 p{
+    text-align: center;
 }
+
+
+.grid-item4 p{
+    text-align: center;
+}
+
+
