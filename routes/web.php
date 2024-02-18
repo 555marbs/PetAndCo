@@ -4,6 +4,7 @@ use App\Http\Controllers\Auth\AdminAuthController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\HomeController;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
@@ -21,9 +22,8 @@ Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashb
 Route::get('/', [DashboardController::class, 'landing'])->name('landing');
 
 
-Route::get('/guides', function () {
-    return view('dashboard.guides');
-})->name('guides');
+Route::get('/guides', [PostController::class, 'index'])->name('dashboard.guides');
+
 
 Route::get('/categories', function () {
     return view('dashboard.categories');
@@ -44,6 +44,8 @@ Route::get('/bird', function () {
 Route::get('/fish', function () {
     return view('classification.fish');
 })->name('fish');
+
+
 
 Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
 

@@ -8,7 +8,8 @@ class PostController extends Controller
 {
     public function index()
     {
-        return Post::all();
+        $posts = Post::all();
+        return view('dashboard.guides', compact('posts'));
     }
 
     public function store(Request $request)
