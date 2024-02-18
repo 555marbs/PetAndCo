@@ -34,11 +34,6 @@
             <a href="{{ route('fish') }}">
                 <img src="/img/4.png" alt="Button 4">
             </a>
-
-            <a href="link5.html" target="_blank">
-                <img src="/img/4.png" alt="Button 5">
-            </a>
-
         </div>
     </div>
 
