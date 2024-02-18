@@ -9,7 +9,8 @@ class PostController extends Controller
     public function index()
     {
         $posts = Post::all();
-        return view('dashboard.guides', compact('posts'));
+       return view('dashboard.guides', compact('posts'));
+       // return response()->json(['posts' => $posts]);
     }
 
     public function store(Request $request)
