@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdoptionController;
 use App\Http\Controllers\Auth\AdminAuthController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProfileController;
@@ -21,12 +22,13 @@ Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashb
 Route::get('/', [DashboardController::class, 'landing'])->name('landing');
 
 
-Route::get('/guides', [PostController::class, 'index'])->name('dashboard.guides');
-
-
 Route::get('/categories', function () {
     return view('dashboard.categories');
 })->name('categories');
+
+Route::get('/adoption', function () {
+    return view('dashboard.adoption');
+})->name('adoption');
 
 Route::get('/dog', function () {
     return view('classification.dog');
@@ -45,8 +47,9 @@ Route::get('/fish', function () {
 })->name('fish');
 
 
+Route::get('/guides', [PostController::class, 'index'])->name('dashboard.guides');
 
-Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
+Route::get('/adoption', [AdoptionController::class, 'index'])->name('dashboard.adoption');
 
 Route::get('/admin/login', [AdminAuthController::class, 'showLoginForm'])->name('admin.login');
 Route::post('/admin/login', [AdminAuthController::class, 'apiLogin']);

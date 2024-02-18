@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <div class="background-image">
+    <div class="background-image"></div>
     @yield('content')
 </body>
 
