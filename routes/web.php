@@ -51,8 +51,7 @@ Route::get('/guides', [PostController::class, 'index'])->name('dashboard.guides'
 
 Route::get('/adoption', [AdoptionController::class, 'index'])->name('dashboard.adoption');
 
-Route::get('/admin/login', [AdminAuthController::class, 'showLoginForm'])->name('admin.login');
-Route::post('/admin/login', [AdminAuthController::class, 'apiLogin']);
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

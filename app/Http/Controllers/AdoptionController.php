@@ -13,6 +13,11 @@ class AdoptionController extends Controller
         return view('dashboard.adoption', compact('adoptions'));
     }
 
+    public function get()
+    {
+        return Adoption::all();
+    }
+
     public function store(Request $request)
     {
         $validatedData = $request->validate([
@@ -43,6 +48,7 @@ class AdoptionController extends Controller
 
         $validatedData = $request->validate([
             'title' => 'required|string|max:255',
+            'contact' => 'required|string|max:255',
             'content' => 'required|string',
             'image' =>'image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);

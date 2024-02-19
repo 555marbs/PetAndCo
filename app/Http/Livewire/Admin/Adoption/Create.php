@@ -11,15 +11,15 @@ class Create extends Component
     use WithFileUploads;
 
     public $title;
-    public $content;
     public $contact;
+    public $content;
     public $image;
     
     protected $rules = [
         'title' => 'required|string|max:255',
-        'content' => 'required|string',
         'contact' => 'required|string|max:255',
-        'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',        
+        'content' => 'required|string',
+        'image' => 'image|mimes:jpeg,png,jpg,gif|max:2048',        
     ];
 
     public function updated($input)
@@ -40,8 +40,8 @@ class Create extends Component
 
         Adoption::create([
             'title' => $this->title,
-            'content' => $this->content,
             'contact' => $this->contact,
+            'content' => $this->content,
             'image' => $this->image,
             'user_id' => auth()->id(),
         ]);

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdoptionController;
 use App\Http\Controllers\Auth\AdminAuthController;
+use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\Auth\UserAuthController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostController;
@@ -20,12 +21,24 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-/* Post */
+/* Guides */
 Route::resource('post', PostController::class);
+Route::get('posts', [PostController::class, 'get']);
+Route::post('posts', [PostController::class, 'store']);
+Route::put('posts', [PostController::class, 'update']);
+Route::delete('posts', [PostController::class, 'destroy']);
+
+/* Adoption */
 Route::resource('adoption', AdoptionController::class);
+Route::get('adoption', [AdoptionController::class, 'get']);
+Route::post('adoption', [AdoptionController::class, 'store']);
+Route::put('adoption', [AdoptionController::class, 'update']);
+Route::delete('adoption', [AdoptionController::class, 'destroy']);
+
 
 /* Login */
 Route::middleware(['auth:sanctum'])->group(function(){
+    
     Route::post('/logout', [UserAuthController::class, 'logout']);
     Route::get('/loggeduser', [UserAuthController::class, 'logged_user']);
     Route::post('/changepassword', [UserAuthController::class, 'change_password']);

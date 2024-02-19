@@ -41,8 +41,8 @@ class AdoptionComponent implements CRUDComponent
     {
         return [
             'title' => 'text',
-            'content' => 'text',
             'contact' => 'text',
+            'content' => 'text',
             'image' => 'file'
         ];
     }
@@ -53,9 +53,9 @@ class AdoptionComponent implements CRUDComponent
     {
         return [
             'title' => 'required|string|max:255',
-            'content' => 'required|string',
             'contact' => 'required|string|max:255',
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'content' => 'required|string',
+            'image' =>'image|mimes:jpeg,png,jpg,gif|max:2048',
         ];
     }
 

@@ -19,7 +19,7 @@ class Update extends Component
     protected $rules = [
         'title' => 'required|string|max:255',
         'content' => 'required|string',
-        'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',        
+        'image' => 'image|mimes:jpeg,png,jpg,gif|max:2048',        
     ];
 
     public function mount(Post $Post){

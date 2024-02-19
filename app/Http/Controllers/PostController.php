@@ -13,6 +13,11 @@ class PostController extends Controller
        // return response()->json(['posts' => $posts]);
     }
 
+    public function get()
+    {
+        return Post::all();
+    }
+
     public function store(Request $request)
     {
         $validatedData = $request->validate([
@@ -65,5 +70,7 @@ class PostController extends Controller
 
         return response()->json(['message' => 'Post deleted successfully']);
     }
+
+
 }
 
