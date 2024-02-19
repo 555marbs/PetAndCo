@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdoptionController;
+use App\Http\Controllers\api\UserController;
 use App\Http\Controllers\Auth\AdminAuthController;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\Auth\UserAuthController;
@@ -37,17 +38,12 @@ Route::delete('adoption', [AdoptionController::class, 'destroy']);
 
 
 /* Login */
-Route::middleware(['auth:sanctum'])->group(function(){
-    
-    Route::post('/logout', [UserAuthController::class, 'logout']);
-    Route::get('/loggeduser', [UserAuthController::class, 'logged_user']);
-    Route::post('/changepassword', [UserAuthController::class, 'change_password']);
-});
 Route::prefix('api')->group(function () {
     Route::post('/login', [UserAuthController::class, 'login']);
-    Route::post('/admin/login', [AdminAuthController::class, 'apiLogin']);
-    // Protected routes
-    Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-        return $request->user();
-    });
+    Route::post('/logout', [UserAuthController::class, 'logout']);
 });
+
+Route::get('user', [UserController::class, 'user']);
+Route::post('user', [UserController::class, 'add']);
+Route::put('user', [UserController::class, 'update']);
+Route::delete('user/{id}', [UserController::class, 'delete']);
