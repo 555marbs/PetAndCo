@@ -43,7 +43,11 @@ Route::prefix('api')->group(function () {
     Route::post('/logout', [UserAuthController::class, 'logout']);
 });
 
+/* User */
 Route::get('user', [UserController::class, 'user']);
 Route::post('user', [UserController::class, 'add']);
 Route::put('user', [UserController::class, 'update']);
 Route::delete('user/{id}', [UserController::class, 'delete']);
+
+
+Route::post('/login', [UserController::class, 'login']);

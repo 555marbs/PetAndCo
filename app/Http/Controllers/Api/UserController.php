@@ -4,7 +4,10 @@ namespace App\Http\Controllers\api;
 
 use App\Http\Controllers\Controller;
 use App\Models\User;
+use App\Providers\RouteServiceProvider;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
@@ -53,5 +56,32 @@ class UserController extends Controller
         } else {
             return ["result " => "Data has not been delete"];
         }
+    }
+
+    public function login(Request $request){
+        $request->validate([
+            'email'=>'required|email',
+            'password'=>'required',
+        ]);
+        $user = User::where('email', $request->email)->first();
+        if($user && Hash::check($request->password, $user->password)){
+            $token = $user->createToken($request->email)->plainTextToken;
+            return response([
+                'token'=>$token,
+                'message' => 'Login Success',
+                'status'=>'success'
+            ], 200);
+        }
+        return response([
+            'message' => 'The Provided Credentials are Incorrect',
+            'status'=>'failed'
+        ], 401);
+    }
+
+    protected function authenticated(Request $request, $user): RedirectResponse
+    {
+        $request->authenticate();
+        $request->session()->regenerate();
+        return redirect()->intended(RouteServiceProvider::HOME);
     }
 }
