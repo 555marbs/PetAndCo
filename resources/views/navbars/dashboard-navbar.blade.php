@@ -10,13 +10,13 @@
                 <a class="nav-link" href="{{ route('dashboard') }}">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ url('/guides') }}">Guides</a>
+                <a class="nav-link" href="{{ url('guide') }}">Guides</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('categories') }}">Categories</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ url('/adoption') }}">Adoption</a>
+                <a class="nav-link" href="{{ url('adoptions') }}">Adoption</a>
             </li>
 
         </ul>

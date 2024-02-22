@@ -25,10 +25,6 @@ Route::get('/categories', function () {
     return view('dashboard.categories');
 })->name('categories');
 
-Route::get('/adoption', function () {
-    return view('dashboard.adoption');
-})->name('adoption');
-
 Route::get('/dog', function () {
     return view('classification.dog');
 })->name('dog');
@@ -46,9 +42,9 @@ Route::get('/fish', function () {
 })->name('fish');
 
 
-Route::get('/guides', [PostController::class, 'index'])->name('dashboard.guides');
+Route::get('/guide', [PostController::class, 'index'])->name('dashboard.guides');
 
-Route::get('/adoption', [AdoptionController::class, 'index'])->name('dashboard.adoption');
+Route::get('/adoptions', [AdoptionController::class, 'index'])->name('dashboard.adoption');
 
 
 

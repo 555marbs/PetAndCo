@@ -75,5 +75,10 @@
     "Posts": "Posts",
     "Contact": "Contact",
     "Adoption": "Adoption",
-    "Adoptions": "Adoptions"
+    "Adoptions": "Adoptions",
+    "Name": "Name",
+    "Email": "Email",
+    "Password": "Password",
+    "User": "User",
+    "Users": "Users"
 }
