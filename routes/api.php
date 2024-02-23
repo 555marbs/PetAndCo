@@ -2,10 +2,7 @@
 
 use App\Http\Controllers\AdoptionController;
 use App\Http\Controllers\api\UserController;
-use App\Http\Controllers\Auth\AdminAuthController;
-use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\Auth\UserAuthController;
-use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -48,6 +45,9 @@ Route::get('user', [UserController::class, 'user']);
 Route::post('user', [UserController::class, 'add']);
 Route::put('user', [UserController::class, 'update']);
 Route::delete('user/{id}', [UserController::class, 'delete']);
-
-
 Route::post('/login', [UserController::class, 'login']);
+Route::middleware(['auth:sanctum'])->group(function(){
+    Route::post('/logout', [UserController::class, 'logout']);
+    Route::post('/change_password', [UserController::class, 'change_password']);
+});
+
