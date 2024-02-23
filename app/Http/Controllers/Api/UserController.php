@@ -78,10 +78,31 @@ class UserController extends Controller
         ], 401);
     }
 
+    public function logout(){
+        auth()->user()->tokens()->delete();
+        return response([
+            'message' => 'Logout Success',
+            'status'=>'success'
+        ], 200);
+    }
+
     protected function authenticated(Request $request, $user): RedirectResponse
     {
         $request->authenticate();
         $request->session()->regenerate();
         return redirect()->intended(RouteServiceProvider::HOME);
+    }
+
+    public function change_password(Request $request){
+        $request->validate([
+            'password' => 'required|confirmed',
+        ]);
+        $loggeduser = auth()->user();
+        $loggeduser->password = Hash::make($request->password);
+        $loggeduser->save();
+        return response([
+            'message' => 'Password Changed Successfully',
+            'status'=>'success'
+        ], 200);
     }
 }
