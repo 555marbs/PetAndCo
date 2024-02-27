@@ -60,6 +60,8 @@ class PostComponent implements CRUDComponent
     // Where files will store for inputs
     public function storePaths()
     {
-        return [];
+        return [
+            'image' => 'public/guides'
+        ];
     }
 }

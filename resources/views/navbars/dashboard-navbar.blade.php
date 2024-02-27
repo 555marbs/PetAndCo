@@ -10,13 +10,13 @@
                 <a class="nav-link" href="{{ route('dashboard') }}">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ url('/guides') }}">Guides</a>
+                <a class="nav-link" href="{{ url('guide') }}">Guides</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('categories') }}">Categories</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ url('/adoption') }}">Adoption</a>
+                <a class="nav-link" href="{{ url('adoptions') }}">Adoption</a>
             </li>
 
         </ul>
@@ -24,7 +24,7 @@
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    More
+                    {{ Auth::user()->name}}
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="{{ route('profile.edit') }}">Profile</a>

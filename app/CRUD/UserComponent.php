@@ -4,9 +4,9 @@ namespace App\CRUD;
 
 use EasyPanel\Contracts\CRUDComponent;
 use EasyPanel\Parsers\Fields\Field;
-use App\Models\Adoption;
+use App\Models\User;
 
-class AdoptionComponent implements CRUDComponent
+class UserComponent implements CRUDComponent
 {
     // Manage actions in crud
     public $create = true;
@@ -19,19 +19,19 @@ class AdoptionComponent implements CRUDComponent
 
     public function getModel()
     {
-        return Adoption::class;
+        return User::class;
     }
 
     // which kind of data should be showed in list page
     public function fields()
     {
-        return ['title', 'content', 'contact', 'image'];
+        return ['name', 'email', 'password'];
     }
 
     // Searchable fields, if you dont want search feature, remove it
     public function searchable()
     {
-        return ['title', 'content', 'contact', 'image'];
+        return ['name', 'email', 'password'];
     }
 
     // Write every fields in your db which you want to have a input
@@ -39,31 +39,19 @@ class AdoptionComponent implements CRUDComponent
     // "password", "number", "email", "select", "date", "datetime", "time"
     public function inputs()
     {
-        return [
-            'title' => 'text',
-            'contact' => 'text',
-            'content' => 'text',
-            'image' => 'file'
-        ];
+        return [];
     }
 
     // Validation in update and create actions
     // It uses Laravel validation system
     public function validationRules()
     {
-        return [
-            'title' => 'required|string|max:255',
-            'contact' => 'required|string|max:255',
-            'content' => 'required|string',
-            'image' =>'image|mimes:jpeg,png,jpg,gif|max:2048',
-        ];
+        return [];
     }
 
     // Where files will store for inputs
     public function storePaths()
     {
-        return [
-            'image' => 'public/adoption',
-        ];
+        return [];
     }
 }

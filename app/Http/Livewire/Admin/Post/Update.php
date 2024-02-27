@@ -42,7 +42,7 @@ class Update extends Component
         $this->dispatchBrowserEvent('show-message', ['type' => 'success', 'message' => __('UpdatedMessage', ['name' => __('Post') ]) ]);
         
         if($this->getPropertyValue('image') and is_object($this->image)) {
-            $this->image = $this->getPropertyValue('image')->store('image');
+            $this->image = $this->getPropertyValue('image')->store('public/guides');
         }
 
         $this->post->update([
