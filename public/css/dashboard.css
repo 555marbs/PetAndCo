@@ -6,8 +6,6 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-image: url('/img/sheshable bg.jpg');
-    background-size: cover;
 }
 
 .image-container {
@@ -33,7 +31,6 @@ body {
     color: white;
     margin-left: 7%;
     margin-right: 5%;
-    font-family: 'Times New Roman', Times, serif;
     padding: 20px;
     font-weight: bold; /* Apply bold font weight to paragraphs */
 }
@@ -41,7 +38,6 @@ body {
 .image-container h1 {
     color: white;
     text-align: center;
-    font-family: 'Times New Roman', Times, serif;
     font-weight: bold; /* Apply bold font weight to headings */
 }
 
@@ -73,3 +69,5 @@ body {
 .button-grid img {
     width: 100px !important;
 }
+
+

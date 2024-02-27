@@ -25,7 +25,7 @@ class RedirectIfAuthenticated
                     case 'admin':
                         return redirect('/admin');
                     default:
-                        return redirect('/dashboard');
+                        return redirect('/home');
 
                 }
             }

@@ -10,7 +10,6 @@
 
 
     <div class="image-container">
-        <h1>Pet&Co.</h1><br>
         <img src="/img/cat2.jpg" alt="Changing Image" class="changing-image" id="changingImage">
         <p>Welcome to Pet and Co, where we celebrate the joy and companionship that pets bring to our lives!  Our website is dedicated to providing a one-stop destination for all things related to your beloved furry friends. Explore a wide range of articles, guides, and resources on pet care, health, training, and nutrition. Whether you are a first-time pet owner or an experienced enthusiast, we have valuable insights to enhance your pet parenting journey.</p>
     </div>

@@ -17,8 +17,9 @@ use App\Http\Controllers\PostController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
+Route::get('/home', [DashboardController::class, 'dashboard'])->name('dashboard');
 Route::get('/', [DashboardController::class, 'landing'])->name('landing');
+Route::get('/category', [DashboardController::class, 'category'])->name('categories');
 Route::get('/dogpetcare', [DashboardController::class, 'dogpetcare'])->name('dogpetcare'); //Http babaguhin din sa dashboardcontrollers
 Route::get('/dogbreed',[DashboardController::class, 'dogbreed'])->name('dogbreed');
 Route::get('/dogroom',[DashboardController::class,'dogroom'])->name('dogroom');
@@ -33,9 +34,6 @@ Route::get('fishkind',[DashboardController::class,'fishkind'])->name('fishkind')
 Route::get('fishstyle',[DashboardController::class,'fishstyle'])->name('fishstyle');
 Route::get('fishpage',[DashboardController::class,'fishpage'])->name('fishpage');
 
-Route::get('/categories', function () {
-    return view('dashboard.categories');
-})->name('categories');
 
 Route::get('/dog', function () {
     return view('classification.dog');
@@ -54,7 +52,7 @@ Route::get('/fish', function () {
 })->name('fish');
 
 
-Route::get('/guide', [PostController::class, 'index'])->name('dashboard.guides');
+Route::get('/guides', [PostController::class, 'index'])->name('dashboard.guides');
 
 Route::get('/adoptions', [AdoptionController::class, 'index'])->name('dashboard.adoption');
 

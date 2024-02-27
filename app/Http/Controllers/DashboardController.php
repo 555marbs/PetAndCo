@@ -24,7 +24,7 @@ class DashboardController extends Controller
     }
     public function catpetcare(){
         return view("classification.catpetcare");
-    } 
+    }
     public function catbreed(){
         return view("classification.catbreed");
     }
@@ -48,5 +48,9 @@ class DashboardController extends Controller
     }
     public function fishpage(){
         return view("classification.fishpage");
+    }
+
+    public function category(){
+        return view ("dashboard.categories");
     }
 }
