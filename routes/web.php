@@ -20,7 +20,19 @@ use App\Http\Controllers\PostController;
 */
 Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
 Route::get('/', [DashboardController::class, 'landing'])->name('landing');
-
+Route::get('/dogpetcare', [DashboardController::class, 'dogpetcare'])->name('dogpetcare'); //Http babaguhin din sa dashboardcontrollers
+Route::get('/dogbreed',[DashboardController::class, 'dogbreed'])->name('dogbreed');
+Route::get('/dogroom',[DashboardController::class,'dogroom'])->name('dogroom');
+Route::get('/catpetcare',[DashboardController::class, 'catpetcare'])->name('catpetcare');
+Route::get('/catbreed', [DashboardController::class, 'catbreed'])->name('catbreed');
+Route::get('/catgroom',[DashboardController::class, 'catgroom'])->name('catgroom');
+Route::get('/birdpetcare',[DashboardController::class, 'birdpetcare'])->name('birdpetcare');
+Route::get('/birdbreed',[DashboardController::class, 'birdbreed'])->name('birdbreed');
+Route::get('/birdgroom',[DashboardController::class,'birdgroom'])->name('birdgroom');
+Route::get('fishpet',[DashboardController::class, 'fishpet'])->name('fishpet');
+Route::get('fishkind',[DashboardController::class,'fishkind'])->name('fishkind');
+Route::get('fishstyle',[DashboardController::class,'fishstyle'])->name('fishstyle');
+Route::get('fishpage',[DashboardController::class,'fishpage'])->name('fishpage');
 
 Route::get('/categories', function () {
     return view('dashboard.categories');

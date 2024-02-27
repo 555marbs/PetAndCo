@@ -1,15 +1,34 @@
+body {
+    font-family: 'Fredoka One', cursive;
+}
+
+.az-signin-header h2,
+.az-signin-header h4 {
+    color: #000000 !important;;  /* Set text color to black */
+}
+
+.az-logo {
+    text-align: center;
+}
+
+.az-logo,
+.az-signin-header h2 {
+    text-align: center;
+}
+
 .az-signin-wrapper {
     flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 40px;
+    margin-top: 230px; /* Adjust this value to move the form downwards */
 }
 
 .az-card-signin {
     height: 560px;
     padding: 20px;
     display: flex;
+    border-radius: 10px; /* Add border radius */
     flex-direction: column;
     justify-content: space-between;
     background-color: #B19470;
@@ -58,6 +77,17 @@
 
 .az-signin-header .btn {
     margin-top: 25px;
+    background-color: #a08a6e; /* Set default button background color */
+    color: #ffffff; /* Set default button text color */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Add transition for smooth hover effect */
+}
+
+.az-signin-header .btn:hover {
+    background-color: #8d7251; /* Change background color on hover */
 }
 
 .az-signin-footer p {

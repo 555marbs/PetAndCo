@@ -13,7 +13,7 @@
     </div>
     <div class="project-items row">
         <div class="project-item col-lg-4 col-md-6 mb-4">
-            <a href="/link/to/pet_care_page" class="card-link">
+        <a href="{{ route('catpetcare') }}" class="card-link">
                 <div class="card">
                     <h2 class="card-title text-center my-3">PET CARE</h2>
                     <img src="/img/catnobg.png " alt="Button 1">
@@ -26,7 +26,7 @@
             </a>
         </div>
         <div class="project-item col-lg-4 col-md-6 mb-4">
-            <a href="/link/to/dog_breeds_page" class="card-link">
+        <a href="{{ route('catbreed') }}" class="card-link">
                 <div class="card">
                     <h2 class="card-title text-center my-3">CAT BREEDS</h2>
                     <img src="/img/catnobg.png " alt="Button 1">
@@ -39,7 +39,7 @@
             </a>
         </div>
         <div class="project-item col-lg-4 col-md-6 mb-4">
-            <a href="/link/to/dog_breeds_page" class="card-link">
+        <a href="{{ route('catgroom') }}" class="card-link">
                 <div class="card">
                     <h2 class="card-title text-center my-3">CAT GROOMING</h2>
                     <img src="/img/catnobg.png " alt="Button 1">

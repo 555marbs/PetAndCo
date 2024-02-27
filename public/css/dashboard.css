@@ -24,22 +24,25 @@ body {
     transition: opacity 1s ease-in;
     transition: opacity 1s ease-out;
     max-width: 800px;
+}
 
-    p {
-        align-items: right;
-        text-align: left;
-        margin-top: 10px;
-        color: white;
-        margin-left: 7%;
-        margin-right: 5%;
-        font-family: 'Times New Roman', Times, serif;
-        padding: 20px;
-    }
-    h1{
-        color: white;
-        text-align: center;
-        font-family: 'Times New Roman', Times, serif;
-    }
+.image-container p {
+    align-items: right;
+    text-align: left;
+    margin-top: 10px;
+    color: white;
+    margin-left: 7%;
+    margin-right: 5%;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 20px;
+    font-weight: bold; /* Apply bold font weight to paragraphs */
+}
+
+.image-container h1 {
+    color: white;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold; /* Apply bold font weight to headings */
 }
 
 .changing-image {
@@ -59,13 +62,14 @@ body {
     gap: 20px;
     margin-left: 8%;
     padding: 20px;
+}
 
-    a {
-        padding: 10px;
-        text-align: center;
-    }
+.button-grid a {
+    padding: 10px;
+    text-align: center;
+    font-weight: bold; /* Apply bold font weight to anchor links */
+}
 
-    img {
-        width: 100px !important;
-    }
+.button-grid img {
+    width: 100px !important;
 }
