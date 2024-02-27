@@ -8,7 +8,9 @@
 
 <div class="az-signin-wrapper">
     <div class="az-card-signin">
-      <h1 class="az-logo">Pet&Co.</h1>
+      <a class="az-logo">
+        <img src="/img/logo.png" alt="Pet&Co.">
+      </a>
       <div class="az-signin-header">
         <h2>Welcome back!</h2>
         <h4>Please sign in to continue</h4>
