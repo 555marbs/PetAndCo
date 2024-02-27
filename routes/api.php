@@ -4,7 +4,6 @@ use App\Http\Controllers\AdoptionController;
 use App\Http\Controllers\api\UserController;
 use App\Http\Controllers\Auth\UserAuthController;
 use App\Http\Controllers\PostController;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
