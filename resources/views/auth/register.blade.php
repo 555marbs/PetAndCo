@@ -1,52 +1,81 @@
-<x-guest-layout>
-    <form method="POST" action="{{ route('register') }}">
-        @csrf
+@extends('layouts.app')
 
-        <!-- Name -->
-        <div>
-            <x-input-label for="name" :value="__('Name')" />
-            <x-text-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
-            <x-input-error :messages="$errors->get('name')" class="mt-2" />
-        </div>
+@section('styles')
+<link rel="stylesheet" href="{{ asset('css/register.css') }}">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+@endsection
 
-        <!-- Email Address -->
-        <div class="mt-4">
-            <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autocomplete="username" />
-            <x-input-error :messages="$errors->get('email')" class="mt-2" />
-        </div>
 
-        <!-- Password -->
-        <div class="mt-4">
-            <x-input-label for="password" :value="__('Password')" />
+<div class="az-signin-wrapper">
+    <div class="az-card-signin">
+        <a class="az-logo">
+            <img src="/img/logo.png" alt="Pet&Co.">
+        </a>
+        <div class="az-signin-header">
+            <h3>Create your account</h3>
+            <h4>Please register to continue</h4>
 
-            <x-text-input id="password" class="block mt-1 w-full"
-                            type="password"
-                            name="password"
-                            required autocomplete="new-password" />
+            <form action="{{ route('register') }}" method="POST">
+                @csrf <!-- Generates CSRF token field -->
+                <div class="form-group">
 
-            <x-input-error :messages="$errors->get('password')" class="mt-2" />
-        </div>
+                    <input type="text" class="form-control" name="name" id="name"
+                        placeholder="Name">
+                </div><!-- form-group -->
+                <div class="form-group">
+                    <input type="email" class="form-control" name="email" id="email"
+                        placeholder="Email">
+                </div><!-- form-group -->
+                <div class="form-group">
+                    <div class="input-group">
+                        <input type="password" class="form-control" name="password" id="password"
+                            placeholder="Create a Password">
+                        <div class="input-group-append">
+                            <span class="input-group-text" id="togglePassword">
+                                <i class="fa fa-eye" aria-hidden="true" onclick="togglePasswordVisibility()"></i>
+                            </span>
+                        </div>
+                    </div><!-- input-group -->
+                </div><!-- form-group -->
+                <div class="form-group">
+                    <div class="input-group">
+                        <input type="password" class="form-control" name="password_confirmation"
+                            id="password_confirmation" placeholder="Confirm Password">
+                        <div class="input-group-append">
+                            <span class="input-group-text" id="toggleConfirmPassword">
+                                <i class="fa fa-eye" aria-hidden="true" onclick="toggleConfirmPasswordVisibility()"></i>
+                            </span>
+                        </div>
+                    </div><!-- input-group -->
+                </div><!-- form-group -->
+                <button type="submit" class="btn btn-az-primary btn-block">Register</button>
+            </form>
+        </div><!-- az-signin-header -->
+        <div class="az-signin-footer">
+            <p>Already have an account? <a href="{{ route('login') }}">Sign in here</a></p>
+        </div><!-- az-signin-footer -->
+    </div><!-- az-card-signin -->
+</div><!-- az-signin-wrapper -->
 
-        <!-- Confirm Password -->
-        <div class="mt-4">
-            <x-input-label for="password_confirmation" :value="__('Confirm Password')" />
+<script src="{{ asset('js/register.js') }}"></script>
 
-            <x-text-input id="password_confirmation" class="block mt-1 w-full"
-                            type="password"
-                            name="password_confirmation" required autocomplete="new-password" />
+<script>
+    function togglePasswordVisibility() {
+        var passwordInput = document.getElementById("password");
+        if (passwordInput.type === "password") {
+            passwordInput.type = "text";
+        } else {
+            passwordInput.type = "password";
+        }
+    }
 
-            <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
-        </div>
-
-        <div class="flex items-center justify-end mt-4">
-            <a class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800" href="{{ route('login') }}">
-                {{ __('Already registered?') }}
-            </a>
-
-            <x-primary-button class="ms-4">
-                {{ __('Register') }}
-            </x-primary-button>
-        </div>
-    </form>
-</x-guest-layout>
+    function toggleConfirmPasswordVisibility() {
+        var confirmPasswordInput = document.getElementById("password_confirmation");
+        if (confirmPasswordInput.type === "password") {
+            confirmPasswordInput.type = "text";
+        } else {
+            confirmPasswordInput.type = "password";
+        }
+    }
+</script>
