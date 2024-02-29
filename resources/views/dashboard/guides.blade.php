@@ -11,7 +11,7 @@
     <div>
         @foreach($posts as $post)
             <div>
-                <img src="{{ asset('storage/guides' . $post->image) }}">
+                <img src="{{ asset('images/' . $post->image) }}">
                 <h2>{{ $post->title }}</h2>
                 <p>{{ $post->content }}</p>
             </div>

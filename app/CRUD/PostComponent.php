@@ -61,7 +61,7 @@ class PostComponent implements CRUDComponent
     public function storePaths()
     {
         return [
-            'image' => 'public/guides'
+            'image' => '/'
         ];
     }
 }
