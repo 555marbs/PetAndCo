@@ -8,19 +8,18 @@
 @section('content')
 <section id="projects" class="pt-5 pb-5 project-section">
     <div class="projects-header pt-5 pb-5">
-        <h1 class="section-title"><span class="highlight">DOG </span>CARE</h1>
+        <h1 class="section-title"><span class="highlight">CAT </span>GROOM</h1>
     </div>
     <div class="project-items row">
         <!-- Card Code Starts Here -->
         <div class="project-item col-lg-4 col-md-6 mb-4">
-            <a href="{{ route('dogpetcare') }}" class="card-link">
                 <div class="card">
-                    <h2 class="card-title text-center my-3">PET CARE</h2>
-                    <img src="/img/dogpet.jpg" alt="Button 1">
+                    <h2 class="card-title text-center my-3">Dental hygiene</h2>
+                    <img src="/img/dentalhygienecat.jpg" alt="Button 1">
                     <div class="card-body" style="height: 150px;"> 
-                        <p class="card-text">Pet Care is essential for maintaining the health and well-being of your furry friend. From regular grooming to proper 
-                            nutrition and exercise, it's important to provide your pet with the care they need to thrive. Whether it's scheduling vet appointments, 
-                            keeping up with vaccinations, or simply spending quality time together.</p>
+                        <p class="card-text">Dental care is essential for your cat's overall health. Brush your cat's teeth regularly with 
+                            a pet-specific toothbrush and toothpaste to prevent plaque buildup and periodontal disease. You can also provide
+                            dental treats or toys designed to promote oral hygiene.</p>
                     </div>
                 </div>
             </a>
@@ -29,14 +28,12 @@
         
         <!-- Duplicate Card Code Starts Here -->
         <div class="project-item col-lg-4 col-md-6 mb-4">
-            <a href="{{ route('dogpetcare') }}" class="card-link">
                 <div class="card">
-                    <h2 class="card-title text-center my-3">PET CARE</h2>
-                    <img src="/img/dogpet.jpg" alt="Button 1">
+                    <h2 class="card-title text-center my-3">Flea and tick prevention</h2>
+                    <img src="/img/fleatrick.jpg" alt="Button 1">
                     <div class="card-body" style="height: 150px;"> 
-                        <p class="card-text">Pet Care is essential for maintaining the health and well-being of your furry friend. From regular grooming to proper 
-                            nutrition and exercise, it's important to provide your pet with the care they need to thrive. Whether it's scheduling vet appointments, 
-                            keeping up with vaccinations, or simply spending quality time together.</p>
+                        <p class="card-text"> Use veterinarian-recommended flea and tick prevention products to protect your cat from parasites. 
+                            Regularly check your cat's fur for signs of fleas or ticks, especially after outdoor activities.</p>
                     </div>
                 </div>
             </a>
@@ -45,14 +42,12 @@
         
         <!-- Duplicate Card Code Starts Here -->
         <div class="project-item col-lg-4 col-md-6 mb-4">
-            <a href="{{ route('dogpetcare') }}" class="card-link">
                 <div class="card">
-                    <h2 class="card-title text-center my-3">PET CARE</h2>
-                    <img src="/img/dogpet.jpg" alt="Button 1">
+                    <h2 class="card-title text-center my-3">Eye care</h2>
+                    <img src="/img/eyecarecat.jpg" alt="Button 1">
                     <div class="card-body" style="height: 150px;"> 
-                        <p class="card-text">Pet Care is essential for maintaining the health and well-being of your furry friend. From regular grooming to proper 
-                            nutrition and exercise, it's important to provide your pet with the care they need to thrive. Whether it's scheduling vet appointments, 
-                            keeping up with vaccinations, or simply spending quality time together.</p>
+                        <p class="card-text">: Keep your cat's eyes clean by gently wiping away any discharge with a soft, damp cloth. If you notice 
+                            excessive tearing, redness, or other signs of irritation, consult your veterinarian.</p>
                     </div>
                 </div>
             </a>
