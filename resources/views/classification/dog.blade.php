@@ -40,7 +40,7 @@
         <div class="project-item col-lg-4 col-md-6 mb-4">
             <a href="dogroom" class="card-link">
                 <div class="card">
-                    <h2 class="card-title text-center my-3">CAT GROOMING</h2>
+                    <h2 class="card-title text-center my-3">DOG GROOMING</h2>
                     <img src="/img/1.png" alt="Button 1">
                     <div class="card-body" style="height: 150px;"> <!-- Fixed height applied -->
                     <p class="card-text">Regular grooming is essential for keeping your dog healthy and happy. From brushing their coat to trimming their nails 
