@@ -1,34 +1,29 @@
 .container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+    margin-top: 80px;
+    display: flex;
+    flex: 3;
+    justify-content: center;
 }
 
 .card {
-  width: 300px; /* Adjust the width as needed */
-  margin: 10px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  overflow: hidden;
+    width: auto; /* Adjust the width as needed */
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
-.card img {
-  width: 100%;
-  height: auto;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-}
 
 .card .card-body {
-  padding: 10px;
+    padding: 10px;
 }
 
 .card h5.card-title {
-  margin: 0;
-  font-size: 18px;
+    margin: 0;
+    font-size: 24px;
 }
 
 .card p.card-text {
-  margin-top: 5px;
-  font-size: 14px;
+    margin-top: 5px;
+    font-size: 18px;
 }

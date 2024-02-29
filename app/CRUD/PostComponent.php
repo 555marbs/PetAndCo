@@ -52,8 +52,7 @@ class PostComponent implements CRUDComponent
     {
         return [
             'title' => 'required|string|max:255',
-            'content' => 'required|string',
-            'image' =>'image|mimes:jpeg,png,jpg,gif|max:2048',
+            'content' => 'required|string'
         ];
     }
 

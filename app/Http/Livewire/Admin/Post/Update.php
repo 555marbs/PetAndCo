@@ -18,8 +18,7 @@ class Update extends Component
     
     protected $rules = [
         'title' => 'required|string|max:255',
-        'content' => 'required|string',
-        'image' => 'image|mimes:jpeg,png,jpg,gif|max:2048',        
+        'content' => 'required|string',        
     ];
 
     public function mount(Post $Post){
@@ -42,7 +41,7 @@ class Update extends Component
         $this->dispatchBrowserEvent('show-message', ['type' => 'success', 'message' => __('UpdatedMessage', ['name' => __('Post') ]) ]);
         
         if($this->getPropertyValue('image') and is_object($this->image)) {
-            $this->image = $this->getPropertyValue('image')->store('images/');
+            $this->image = $this->getPropertyValue('image')->store('/');
         }
 
         $this->post->update([

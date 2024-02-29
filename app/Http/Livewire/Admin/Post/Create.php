@@ -16,8 +16,7 @@ class Create extends Component
     
     protected $rules = [
         'title' => 'required|string|max:255',
-        'content' => 'required|string',
-        'image' => 'image|mimes:jpeg,png,jpg,gif|max:2048',        
+        'content' => 'required|string',        
     ];
 
     public function updated($input)
@@ -33,7 +32,7 @@ class Create extends Component
         $this->dispatchBrowserEvent('show-message', ['type' => 'success', 'message' => __('CreatedMessage', ['name' => __('Post') ])]);
         
         if($this->getPropertyValue('image') and is_object($this->image)) {
-            $this->image = $this->getPropertyValue('image')->store('images/');
+            $this->image = $this->getPropertyValue('image')->store('/');
         }
 
         Post::create([
