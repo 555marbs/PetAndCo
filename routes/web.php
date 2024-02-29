@@ -51,6 +51,7 @@ Route::get('/fish', function () {
     return view('classification.fish');
 })->name('fish');
 
+Route::put('/update', [ProfileController::class, 'update'])->name('profile.update');
 
 Route::get('/guides', [PostController::class, 'index'])->name('dashboard.guides');
 
