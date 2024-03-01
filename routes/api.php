@@ -32,6 +32,8 @@ Route::post('adoption', [AdoptionController::class, 'store']);
 Route::put('adoption', [AdoptionController::class, 'update']);
 Route::delete('adoption', [AdoptionController::class, 'destroy']);
 
+Route::post('/adopt/{id}', [AdoptionController::class, 'adopt']);
+
 
 /* Login */
 Route::prefix('api')->group(function () {
