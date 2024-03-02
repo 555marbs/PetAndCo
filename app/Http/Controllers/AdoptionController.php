@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Adoption;
+use App\Mail\AdoptionRequestReceived;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Http\Request;
 
 class AdoptionController extends Controller
@@ -71,5 +73,18 @@ class AdoptionController extends Controller
         $adoptions->delete();
 
         return response()->json(['message' => 'Post deleted successfully']);
+    }
+
+    public function adopt($id)
+    {
+        $adoption = Adoption::findOrFail($id);
+
+        $adoption->status = 'Pending';
+        $adoption->save();
+
+        return response()->json([
+            'success' => true,
+            'message' => "Your Adoption request has been received."
+        ]);
     }
 }

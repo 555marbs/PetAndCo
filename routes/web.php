@@ -59,6 +59,8 @@ Route::get('/guides', [PostController::class, 'index'])->name('dashboard.guides'
 
 Route::get('/adoptions', [AdoptionController::class, 'index'])->name('dashboard.adoption');
 
+Route::get('/adopt/{id}', [AdoptionController::class, 'adopt'])->name('dashboard.adoptions');
+
 
 
 Route::middleware('auth')->group(function () {
