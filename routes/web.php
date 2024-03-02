@@ -33,6 +33,8 @@ Route::get('fishpet',[DashboardController::class, 'fishpet'])->name('fishpet');
 Route::get('fishkind',[DashboardController::class,'fishkind'])->name('fishkind');
 Route::get('fishstyle',[DashboardController::class,'fishstyle'])->name('fishstyle');
 Route::get('fishpage',[DashboardController::class,'fishpage'])->name('fishpage');
+Route::get('adoptionpost',[DashboardController::class,'adoptionpost'])->name('adoptionpost');
+
 
 
 Route::get('/dog', function () {
