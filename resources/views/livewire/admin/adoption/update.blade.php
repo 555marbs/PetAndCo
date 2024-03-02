@@ -20,17 +20,17 @@
                 <input type='text' id='input-title' wire:model.lazy='title' class="form-control  @error('title') is-invalid @enderror" placeholder='' autocomplete='on'>
                 @error('title') <div class='invalid-feedback'>{{ $message }}</div> @enderror
             </div>
-            <!-- Contact Input -->
-            <div class='form-group'>
-                <label for='input-contact' class='col-sm-2 control-label '> {{ __('Contact') }}</label>
-                <input type='text' id='input-contact' wire:model.lazy='contact' class="form-control  @error('contact') is-invalid @enderror" placeholder='' autocomplete='on'>
-                @error('contact') <div class='invalid-feedback'>{{ $message }}</div> @enderror
-            </div>
             <!-- Content Input -->
             <div class='form-group'>
                 <label for='input-content' class='col-sm-2 control-label '> {{ __('Content') }}</label>
                 <input type='text' id='input-content' wire:model.lazy='content' class="form-control  @error('content') is-invalid @enderror" placeholder='' autocomplete='on'>
                 @error('content') <div class='invalid-feedback'>{{ $message }}</div> @enderror
+            </div>
+            <!-- Contact Input -->
+            <div class='form-group'>
+                <label for='input-contact' class='col-sm-2 control-label '> {{ __('Contact') }}</label>
+                <input type='text' id='input-contact' wire:model.lazy='contact' class="form-control  @error('contact') is-invalid @enderror" placeholder='' autocomplete='on'>
+                @error('contact') <div class='invalid-feedback'>{{ $message }}</div> @enderror
             </div>
             <!-- Image Input -->
             <div class='form-group'>
