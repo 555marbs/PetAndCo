@@ -11,7 +11,7 @@
 
     <div class="image-container">
         <img src="/img/cat2.jpg" alt="Changing Image" class="changing-image" id="changingImage">
-        <p>Welcome to Pet and Co, where we celebrate the joy and companionship that pets bring to our lives!  Our website is dedicated to providing a one-stop destination for all things related to your beloved furry friends. Explore a wide range of articles, guides, and resources on pet care, health, training, and nutrition. Whether you are a first-time pet owner or an experienced enthusiast, we have valuable insights to enhance your pet parenting journey.</p>
+        <p>Welcome to Pet&Co., where every animal holds a story and every story awaits a happy ending. Here, we believe in creating lasting bonds and enriching lives, both for our furry friends and their future families.</p>
     </div>
 
     <div class="button-container">

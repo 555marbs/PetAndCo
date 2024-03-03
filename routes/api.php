@@ -26,7 +26,7 @@ Route::put('posts', [PostController::class, 'update']);
 Route::delete('posts', [PostController::class, 'destroy']);
 
 /* Adoption */
-Route::resource('adoption', AdoptionController::class);
+Route::resource('adoptions', AdoptionController::class);
 Route::get('adoption', [AdoptionController::class, 'get']);
 Route::post('adoption', [AdoptionController::class, 'store']);
 Route::put('adoption', [AdoptionController::class, 'update']);

@@ -88,5 +88,5 @@ class AdoptionController extends Controller
         ]);
     }
 
-    
+
 }

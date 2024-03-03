@@ -30,6 +30,6 @@
 
 <!-- Button at the bottom of the navigation bar -->
 <div class="navbar-bottom-button d-flex justify-content-center">
-    <a href="{{ route('adoption_create') }}" class="btn btn-primary" style="width: 900px;">Adopt me flis</a>
+    <a href="{{ route('adoption_create') }}" class="btn btn-primary" style="width: 900px;">Post a Pet For Adoption</a>
 </div>
 @endsection

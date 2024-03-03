@@ -55,7 +55,7 @@
     <!-- Form for posting images and text -->
     <div class="post-form">
         <h2>Post Image and Text</h2>
-        <form method="post" action="{{ route('post.store') }}" enctype="multipart/form-data">
+        <form method="post" action="{{ route('adoptions.store') }}" enctype="multipart/form-data">
             @csrf
             <div class="form-group">
                 <label for="image">Image:</label>
