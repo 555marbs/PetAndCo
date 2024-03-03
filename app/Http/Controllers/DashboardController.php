@@ -56,4 +56,7 @@ class DashboardController extends Controller
     public function adoption_create(){
         return view ("dashboard.adoption-create");
     }
+    public function adoption_application(){
+        return view ("dashboard.adoption_application");
+    }
 }

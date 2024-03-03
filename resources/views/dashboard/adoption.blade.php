@@ -24,7 +24,7 @@
                             <p class="card-text">{{ $adoption->content }}</p>
                             <div class="dropdown-divider"></div>
                             <!-- Adopt button -->
-                            <a href="{{ route('adoption_create') }}" class="btn btn-primary">Adopt</a>
+                            <a href="{{ route('adoption_application') }}" class="btn btn-primary">Adopt</a>
                         </div>
                     </div>
                 </div>

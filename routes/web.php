@@ -34,6 +34,7 @@ Route::get('fishkind',[DashboardController::class,'fishkind'])->name('fishkind')
 Route::get('fishstyle',[DashboardController::class,'fishstyle'])->name('fishstyle');
 Route::get('fishpage',[DashboardController::class,'fishpage'])->name('fishpage');
 Route::get('/adoption_post',[DashboardController::class,'adoption_create'])->name('adoption_create');
+Route::get('/adoption_application', [DashboardController::class, 'adoption_application'])->name('adoption_application');
 
 
 Route::get('/dog', function () {
