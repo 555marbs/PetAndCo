@@ -87,4 +87,6 @@ class AdoptionController extends Controller
             'message' => "Your Adoption request has been received."
         ]);
     }
+
+    
 }

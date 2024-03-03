@@ -4,23 +4,27 @@
 
 
 @section('styles')
-    <link rel="stylesheet" href="{{ asset('css/adoption.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/adoption.css') }}">
 @endsection
 
 @section('content')
+    <div class="button">
+        <a href="{{ route('adoption_create') }}" class="btn btn-primary-adopt">Adopt</a>
+    </div>
     <div class="container">
         <div class="row">
             @foreach ($adoptions as $adoption)
                 <div class="col-md-4">
                     <div class="card">
-                        <img class="card-img-top" src="{{ asset('images/' . $adoption->image) }}" alt="{{ $adoption->title }}">
+                        <img class="card-img-top" src="{{ asset('images/' . $adoption->image) }}"
+                            alt="{{ $adoption->title }}">
                         <div class="card-body">
                             <h2 class="card-title">{{ $adoption->title }}</h2>
                             <h5 class="card-text">{{ $adoption->contact }}</h5>
                             <p class="card-text">{{ $adoption->content }}</p>
                             <div class="dropdown-divider"></div>
                             <!-- Adopt button -->
-                            <a href="{{ url('/adopt/' . $adoption->id) }}" class="btn btn-primary">Adopt</a>
+                            <a href="{{ route('adoption_create') }}" class="btn btn-primary">Adopt</a>
                         </div>
                     </div>
                 </div>
