@@ -2,15 +2,11 @@
 
 @extends('navbars.dashboard-navbar')
 
-
 @section('styles')
     <link rel="stylesheet" href="{{ asset('css/adoption.css') }}">
 @endsection
 
 @section('content')
-    <div class="button">
-        <a href="{{ route('adoption_create') }}" class="btn btn-primary-adopt">Adopt</a>
-    </div>
     <div class="container">
         <div class="row">
             @foreach ($adoptions as $adoption)
@@ -31,4 +27,9 @@
             @endforeach
         </div>
     </div>
+
+<!-- Button at the bottom of the navigation bar -->
+<div class="navbar-bottom-button d-flex justify-content-center">
+    <a href="{{ route('adoption_create') }}" class="btn btn-primary" style="width: 900px;">Adopt me flis</a>
+</div>
 @endsection
