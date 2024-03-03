@@ -50,17 +50,12 @@ class PostComponent implements CRUDComponent
     // It uses Laravel validation system
     public function validationRules()
     {
-        return [
-            'title' => 'required|string|max:255',
-            'content' => 'required|string'
-        ];
+        return [];
     }
 
     // Where files will store for inputs
     public function storePaths()
     {
-        return [
-            'image' => '/'
-        ];
+        return [];
     }
 }

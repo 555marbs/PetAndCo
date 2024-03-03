@@ -53,4 +53,7 @@ class DashboardController extends Controller
     public function category(){
         return view ("dashboard.categories");
     }
+    public function adoptionpost(){
+        return view ("dashboard.adoptionpost");
+    }
 }

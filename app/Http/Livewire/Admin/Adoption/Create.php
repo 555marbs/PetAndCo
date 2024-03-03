@@ -11,15 +11,12 @@ class Create extends Component
     use WithFileUploads;
 
     public $title;
-    public $contact;
     public $content;
+    public $contact;
     public $image;
     
     protected $rules = [
-        'title' => 'required|string|max:255',
-        'contact' => 'required|string|max:255',
-        'content' => 'required|string',
-        'image' => 'image|mimes:jpeg,png,jpg,gif|max:2048',        
+        
     ];
 
     public function updated($input)
@@ -35,13 +32,13 @@ class Create extends Component
         $this->dispatchBrowserEvent('show-message', ['type' => 'success', 'message' => __('CreatedMessage', ['name' => __('Adoption') ])]);
         
         if($this->getPropertyValue('image') and is_object($this->image)) {
-            $this->image = $this->getPropertyValue('image')->store('public/adoption');
+            $this->image = $this->getPropertyValue('image')->store('image');
         }
 
         Adoption::create([
             'title' => $this->title,
-            'contact' => $this->contact,
             'content' => $this->content,
+            'contact' => $this->contact,
             'image' => $this->image,
             'user_id' => auth()->id(),
         ]);

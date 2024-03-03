@@ -41,8 +41,8 @@ class AdoptionComponent implements CRUDComponent
     {
         return [
             'title' => 'text',
-            'contact' => 'text',
             'content' => 'text',
+            'contact' => 'text',
             'image' => 'file'
         ];
     }
@@ -51,19 +51,12 @@ class AdoptionComponent implements CRUDComponent
     // It uses Laravel validation system
     public function validationRules()
     {
-        return [
-            'title' => 'required|string|max:255',
-            'contact' => 'required|string|max:255',
-            'content' => 'required|string',
-            'image' =>'image|mimes:jpeg,png,jpg,gif|max:2048',
-        ];
+        return [];
     }
 
     // Where files will store for inputs
     public function storePaths()
     {
-        return [
-            'image' => 'public/adoption',
-        ];
+        return [];
     }
 }
