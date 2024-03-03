@@ -60,13 +60,10 @@ Route::get('/guides', [PostController::class, 'index'])->name('dashboard.guides'
 
 Route::get('/adoptions', [AdoptionController::class, 'index'])->name('dashboard.adoption');
 
-<<<<<<< HEAD
-=======
 Route::get('/adopt/{id}', [AdoptionController::class, 'adopt'])->name('dashboard.adoptions');
 
 
 
->>>>>>> b8776db17f41f36759634acfe748377a97b29c8c
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');

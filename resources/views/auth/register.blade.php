@@ -13,8 +13,8 @@
             <img src="/img/logo.png" alt="Pet&Co.">
         </a>
         <div class="az-signin-header">
-            <h3>Create your account</h3>
-            <h4>Please register to continue</h4>
+            <h3>Welcome Fur Parent</h3>
+            <h4>Register to Adopt a Pet</h4>
 
             <form action="{{ route('register') }}" method="POST">
                 @csrf <!-- Generates CSRF token field -->

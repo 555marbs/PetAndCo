@@ -1,5 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-light transparent-navbar">
-    <a class="navbar-brand">Pet&Co.</a>
+    <a class="navbar-brand">
+        <img src="/img/logo-white.png" style="height: 60px; width: auto">
+    </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
         aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -16,4 +18,4 @@
     </div>
 </nav>
 
-<button class="btn btn-primary bottom-button" onclick="window.location.href='{{ route('login')}}'">Get Started</button>
+<button class="btn btn-primary bottom-button btn-adopt-now" onclick="window.location.href='{{ route('register')}}'">Adopt Now!</button>

@@ -25,10 +25,13 @@ nav.navbar.transparent-navbar .navbar-nav .nav-link {
 }
 
 /* Button */
-.bottom-button {
+.btn-adopt-now {
     position: absolute;
     bottom: 30px; /* Adjust the distance from the bottom */
     left: 50%;
     transform: translateX(-50%);
-    background-color: #703c24;
+    background-color: #703c24 !important;
+    border-color: #703c24 !important;
+    color: black !important;
+    font-weight: bold !important;
 }
