@@ -5,10 +5,11 @@
   font-family: sans-serif;
 }
 #content {
-  margin-top: 20px; /* Adjust the value as needed */
+  margin-top: 50px; /* Adjust the value as needed */
 }   
 
 body {
+  margin-top: 50px;
   display: flex;
   justify-content: center;
   align-items: center;

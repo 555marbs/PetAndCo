@@ -20,7 +20,7 @@ use App\Http\Controllers\PostController;
 Route::get('/home', [DashboardController::class, 'dashboard'])->name('dashboard');
 Route::get('/', [DashboardController::class, 'landing'])->name('landing');
 Route::get('/category', [DashboardController::class, 'category'])->name('categories');
-Route::get('/dogpetcare', [DashboardController::class, 'dogpetcare'])->name('dogpetcare'); //Http babaguhin din sa dashboardcontrollers
+Route::get('/dogpetcare', [DashboardController::class, 'dogpetcare'])->name('dogpetcare');
 Route::get('/dogbreed',[DashboardController::class, 'dogbreed'])->name('dogbreed');
 Route::get('/dogroom',[DashboardController::class,'dogroom'])->name('dogroom');
 Route::get('/catpetcare',[DashboardController::class, 'catpetcare'])->name('catpetcare');
@@ -33,7 +33,6 @@ Route::get('fishpet',[DashboardController::class, 'fishpet'])->name('fishpet');
 Route::get('fishkind',[DashboardController::class,'fishkind'])->name('fishkind');
 Route::get('fishstyle',[DashboardController::class,'fishstyle'])->name('fishstyle');
 Route::get('fishpage',[DashboardController::class,'fishpage'])->name('fishpage');
-
 
 Route::get('/dog', function () {
     return view('classification.dog');
@@ -51,17 +50,16 @@ Route::get('/fish', function () {
     return view('classification.fish');
 })->name('fish');
 
-Route::put('/update', [ProfileController::class, 'update'])->name('profile.update');
+Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+
+Route::put('/profile/update', [ProfileController::class, 'update'])->name('profile.update');
 
 Route::get('/guides', [PostController::class, 'index'])->name('dashboard.guides');
 
 Route::get('/adoptions', [AdoptionController::class, 'index'])->name('dashboard.adoption');
 
-
-
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
