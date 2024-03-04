@@ -49,7 +49,7 @@
                 <!-- Logo -->
                 <div class="navbar-brand">
                     <a href="{{ route('dashboard') }}">
-                        <span class="logo-text">{{ __('EasyPanel') }}</span>
+                        <img src="/img/logo.png" style="height: 60px; width: auto">
                     </a>
 
                     <div class="container-checkbox">
@@ -138,7 +138,7 @@
         <!-- End Container fluid  -->
 
         <!-- footer -->
-        <footer class="footer text-center text-muted">Adminmart Template, <a href="https://github.com/rezaamini-ir/laravel-easypanel">EasyPanel</a> Package.</footer>
+        
         <!-- End footer -->
     </div>
 </div>
