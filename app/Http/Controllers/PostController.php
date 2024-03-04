@@ -29,8 +29,8 @@ class PostController extends Controller
         if ($request->hasFile('image')) {
             $image = $request->file('image');
             $imageName = time().'.'.$image->getClientOriginalExtension();
-            $image->move(public_path('images'), $imageName);
-            $validatedData['image'] = '/'.$imageName;
+            $image->move(storage_path('app/public'), $imageName);
+            $validatedData['image'] = '/storage/'.$imageName;
         }
 
         return Post::create($validatedData);
@@ -54,8 +54,8 @@ class PostController extends Controller
         if ($request->hasFile('image')) {
             $image = $request->file('image');
             $imageName = time().'.'.$image->extension();
-            $image->move(public_path('images'), $imageName);
-            $validatedData['image'] = '/'.$imageName;
+            $image->move(storage_path('app/public'), $imageName);
+            $validatedData['image'] = '/storage/'.$imageName;
         }
 
         $post->update($validatedData);

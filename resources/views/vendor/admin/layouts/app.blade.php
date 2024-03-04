@@ -48,7 +48,7 @@
 
                 <!-- Logo -->
                 <div class="navbar-brand">
-                    <a href="@route(getRouteName().'.home')">
+                    <a href="{{ route('dashboard') }}">
                         <span class="logo-text">{{ __('EasyPanel') }}</span>
                     </a>
 

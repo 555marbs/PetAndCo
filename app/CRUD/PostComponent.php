@@ -42,7 +42,7 @@ class PostComponent implements CRUDComponent
         return [
             'title' => 'text',
             'content' => 'text',
-            'image' => 'file'
+            'image' => 'file',
         ];
     }
 

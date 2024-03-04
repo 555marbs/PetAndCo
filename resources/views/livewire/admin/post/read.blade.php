@@ -12,7 +12,7 @@
                     </ul>
 
                     <div class="row justify-content-between mt-4 mb-4">
-                        @if(getCrudConfig('Post')->create && hasPermission(getRouteName().'.post.create', 0, 0))
+                        @if(getCrudConfig('Post')->create && hasPermission(getRouteName().'.post.create', 1, 1))
                         <div class="col-md-4 right-0">
                             <a href="@route(getRouteName().'.post.create')" class="btn btn-success">{{ __('CreateTitle', ['name' => __('Post') ]) }}</a>
                         </div>

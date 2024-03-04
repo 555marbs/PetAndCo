@@ -42,7 +42,7 @@ class UserComponent implements CRUDComponent
         return [
             'name' => 'text',
             'email' => 'text',
-            'password' => 'password'
+            'password' => 'text'
         ];
     }
 

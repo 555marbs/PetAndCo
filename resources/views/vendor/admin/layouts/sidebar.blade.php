@@ -13,7 +13,7 @@
                     </a>
                 </li>
 
-                <!--@if(hasPermission(getRouteName().'.crud.lists', true))
+                @if(hasPermission(getRouteName().'.crud.lists', true))
                 <li class="sidebar-item @isActive([getRouteName().'.crud.lists', getRouteName().'.crud.create'], 'selected')">
                     <a class="sidebar-link @isActive([getRouteName().'.crud.lists', getRouteName().'.crud.create'], 'active') " href="@route(getRouteName().'.crud.lists')" aria-expanded="false">
                         <i data-feather="package" class="feather-icon"></i>
@@ -47,7 +47,7 @@
                         <span class="hide-menu">{{ __('Admin Manager') }}</span>
                     </a>
                 </li>
-                @endif -->
+                @endif
 
                 @include('admin::layouts.child-sidebar-menu')
 

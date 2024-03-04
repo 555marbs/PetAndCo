@@ -16,7 +16,10 @@ class Create extends Component
     public $image;
     
     protected $rules = [
-        
+        'title' => 'required|max:100',
+        'content' => 'required',
+        'contact' => 'required',
+        'image' => 'required',        
     ];
 
     public function updated($input)
@@ -32,7 +35,7 @@ class Create extends Component
         $this->dispatchBrowserEvent('show-message', ['type' => 'success', 'message' => __('CreatedMessage', ['name' => __('Adoption') ])]);
         
         if($this->getPropertyValue('image') and is_object($this->image)) {
-            $this->image = $this->getPropertyValue('image')->store('image');
+            $this->image = $this->getPropertyValue('image')->store('/');
         }
 
         Adoption::create([

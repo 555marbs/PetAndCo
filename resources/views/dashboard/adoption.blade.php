@@ -12,7 +12,7 @@
             @foreach ($adoptions as $adoption)
                 <div class="col-md-4">
                     <div class="card">
-                        <img class="card-img-top" src="{{ asset('images/' . $adoption->image) }}"
+                        <img class="card-img-top" src="{{ asset($adoption->image) }}"
                             alt="{{ $adoption->title }}">
                         <div class="card-body">
                             <h2 class="card-title">{{ $adoption->title }}</h2>

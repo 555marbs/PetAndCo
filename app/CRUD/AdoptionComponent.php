@@ -51,12 +51,19 @@ class AdoptionComponent implements CRUDComponent
     // It uses Laravel validation system
     public function validationRules()
     {
-        return [];
+        return [
+            'title' => 'required|max:100',
+            'content' => 'required',
+            'contact' => 'required',
+            'image' => 'required'
+        ];
     }
 
     // Where files will store for inputs
     public function storePaths()
     {
-        return [];
+        return [
+            'image' => '/'
+        ];
     }
 }
