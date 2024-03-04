@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+@extends('navbars.dashboard-navbar')
 @section('styles')
     <!-- Your stylesheets -->
 @endsection
