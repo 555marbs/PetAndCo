@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\api;
 
 use App\Http\Controllers\Controller;
+use App\Models\Adoption;
 use App\Models\User;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Http\RedirectResponse;
@@ -105,4 +106,6 @@ class UserController extends Controller
             'status'=>'success'
         ], 200);
     }
+
+    
 }

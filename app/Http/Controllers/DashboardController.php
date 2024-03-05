@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Adoption;
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller
@@ -56,7 +57,5 @@ class DashboardController extends Controller
     public function adoption_create(){
         return view ("dashboard.adoption-create");
     }
-    public function adoption_application(){
-        return view ("dashboard.adoption_application");
-    }
+    
 }

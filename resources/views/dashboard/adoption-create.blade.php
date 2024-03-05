@@ -73,7 +73,7 @@
                 <label for="content">Content:</label>
                 <textarea name="content" id="content" rows="5" required></textarea>
             </div>
-            <a href="{{ route('dog') }}">
+            <a>
             <button type="submit">Submit</button>
             </a>
         </form>

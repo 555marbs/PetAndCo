@@ -2,12 +2,20 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Adoption extends Model
 {
-    use HasFactory;
 
-    protected $fillable = ['title', 'content', 'contact', 'image'];
+    use SoftDeletes;
+
+    protected $fillable = ['title', 'content', 'contact', 'image', 'user_id'];
+
+    public function applications()
+    {
+        return $this->hasMany(AdoptionApplication::class);
+    }
+
+    
 }

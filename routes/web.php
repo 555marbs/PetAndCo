@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdoptionApplicationController;
 use App\Http\Controllers\AdoptionController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProfileController;
@@ -34,7 +35,7 @@ Route::get('fishkind',[DashboardController::class,'fishkind'])->name('fishkind')
 Route::get('fishstyle',[DashboardController::class,'fishstyle'])->name('fishstyle');
 Route::get('fishpage',[DashboardController::class,'fishpage'])->name('fishpage');
 Route::get('/adoption_post',[DashboardController::class,'adoption_create'])->name('adoption_create');
-Route::get('/adoption_application', [DashboardController::class, 'adoption_application'])->name('adoption_application');
+
 
 
 Route::get('/dog', function () {
@@ -61,7 +62,20 @@ Route::get('/guides', [PostController::class, 'index'])->name('dashboard.guides'
 
 Route::get('/adoptions', [AdoptionController::class, 'index'])->name('dashboard.adoption');
 
-Route::get('/adopt/{id}', [AdoptionController::class, 'adopt'])->name('dashboard.adoptions');
+Route::post('/adoption_post', [AdoptionController::class, 'store'])->name('adoption.store');
+
+// Route to show the adoption application form
+Route::get('/adoptions/{adoption}/apply', [AdoptionApplicationController::class, 'showApplicationForm'])->name('adoption.application.form');
+
+// Route to submit the adoption application
+Route::post('/adoptions/{adoption}/apply', [AdoptionApplicationController::class, 'submitApplication'])->name('adoption.application.submit');
+
+// Routes for the pet owner to accept or reject applications
+Route::post('/applications/{application}/accept', [AdoptionApplicationController::class, 'acceptApplication'])->name('adoption.application.accept');
+Route::post('/applications/{application}/reject', [AdoptionApplicationController::class, 'rejectApplication'])->name('adoption.application.reject');
+
+// Route for the pet owner to view received applications
+Route::get('/my-adoptions/{adoption}/applications', [AdoptionController::class, 'viewApplications'])->name('adoption.view.applications');
 
 
 

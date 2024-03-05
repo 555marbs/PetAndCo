@@ -26,15 +26,21 @@ class AdoptionController extends Controller
             'title' => 'required|string|max:255',
             'content' => 'required|string',
             'contact' => 'required|string',
-            'image' =>'image|mimes:jpeg,png,jpg,gif|max:2048',
+            'image' =>'image|mimes:jpeg,png,jpg,gif',
+
         ]);
+
 
         if ($request->hasFile('image')) {
             $image = $request->file('image');
             $imageName = time().'.'.$image->getClientOriginalExtension();
             $image->move(storage_path('app/public'), $imageName);
             $validatedData['image'] = '/storage/'.$imageName;
+        } else {
+            $validatedData['image'] = null;
         }
+
+        $validatedData['user_id'] = auth()->user()->id;
 
         return Adoption::create($validatedData);
     }
@@ -75,18 +81,17 @@ class AdoptionController extends Controller
         return response()->json(['message' => 'Post deleted successfully']);
     }
 
-    public function adopt($id)
+    public function viewApplications($adoptionId)
     {
-        $adoption = Adoption::findOrFail($id);
+        $adoption = Adoption::with('applications.user')->findOrFail($adoptionId);
 
-        $adoption->status = 'Pending';
-        $adoption->save();
+        if (auth()->user()->id !== $adoption->user_id) {
+            abort(403);
+        }
 
-        return response()->json([
-            'success' => true,
-            'message' => "Your Adoption request has been received."
-        ]);
+        return view('dashboard.applications', ['adoption' => $adoption]);
     }
+
 
 
 }

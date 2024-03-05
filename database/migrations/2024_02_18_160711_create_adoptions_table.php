@@ -14,10 +14,15 @@ return new class extends Migration
         Schema::create('adoptions', function (Blueprint $table) {
             $table->id();
             $table->string('title')->nullable();
-            $table->text('content')->nullable();
+            $table->string('content')->nullable();
             $table->string('contact')->nullable();
             $table->string('image')->nullable();
+            $table->bigInteger('user_id')->unsigned();
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->softDeletes();
             $table->timestamps();
+
+
         });
     }
 
