@@ -39,11 +39,7 @@ class UserComponent implements CRUDComponent
     // "password", "number", "email", "select", "date", "datetime", "time"
     public function inputs()
     {
-        return [
-            'name' => 'text',
-            'email' => 'text',
-            'password' => 'text'
-        ];
+        return [];
     }
 
     // Validation in update and create actions

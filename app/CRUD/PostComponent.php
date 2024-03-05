@@ -42,7 +42,7 @@ class PostComponent implements CRUDComponent
         return [
             'title' => 'text',
             'content' => 'text',
-            'image' => 'file',
+            'image' => 'file'
         ];
     }
 
@@ -50,7 +50,11 @@ class PostComponent implements CRUDComponent
     // It uses Laravel validation system
     public function validationRules()
     {
-        return [];
+        return [
+            'title' => 'required|max:100',
+            'content' => 'required',
+            'image' => 'required'
+        ];
     }
 
     // Where files will store for inputs

@@ -15,7 +15,7 @@ class AdoptionComponent implements CRUDComponent
 
     // If you will set it true it will automatically
     // add `user_id` to create and update action
-    public $with_user_id = true;
+    public $with_user_id = false;
 
     public function getModel()
     {
@@ -62,8 +62,6 @@ class AdoptionComponent implements CRUDComponent
     // Where files will store for inputs
     public function storePaths()
     {
-        return [
-            'image' => '/'
-        ];
+        return [];
     }
 }

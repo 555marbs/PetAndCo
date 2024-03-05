@@ -45,15 +45,14 @@ class Update extends Component
         $this->dispatchBrowserEvent('show-message', ['type' => 'success', 'message' => __('UpdatedMessage', ['name' => __('Adoption') ]) ]);
         
         if($this->getPropertyValue('image') and is_object($this->image)) {
-            $this->image = $this->getPropertyValue('image')->store('/');
+            $this->image = $this->getPropertyValue('image')->store('image');
         }
 
         $this->adoption->update([
             'title' => $this->title,
             'content' => $this->content,
             'contact' => $this->contact,
-            'image' => $this->image,
-            'user_id' => auth()->id(),
+            'image' => $this->image,            
         ]);
     }
 

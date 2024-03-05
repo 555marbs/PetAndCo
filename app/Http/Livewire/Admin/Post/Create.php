@@ -15,7 +15,9 @@ class Create extends Component
     public $image;
     
     protected $rules = [
-        
+        'title' => 'required|max:100',
+        'content' => 'required',
+        'image' => 'required',        
     ];
 
     public function updated($input)
