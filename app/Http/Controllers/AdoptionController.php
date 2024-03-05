@@ -42,7 +42,8 @@ class AdoptionController extends Controller
 
         $validatedData['user_id'] = auth()->user()->id;
 
-        return Adoption::create($validatedData);
+        Adoption::create($validatedData);
+        return redirect('/adoptions');
     }
 
     public function show($id)
