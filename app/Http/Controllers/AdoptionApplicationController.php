@@ -17,15 +17,12 @@ class AdoptionApplicationController extends Controller
 
     public function showApplicationForm($adoptionId)
     {
-        $adoption = Adoption::findOrFail($adoptionId); // Find the adoption post or fail with 404
-
-        // Return the view with the adoption data
+        $adoption = Adoption::findOrFail($adoptionId);
         return view('dashboard.adoption_application', compact('adoption'));
     }
 
     public function submitApplication(Request $request, $adoptionId)
     {
-        Log::debug("Adoption application submission received", $request->all());
         $request->validate([
             'fullname' => 'required|string',
             'tel' => 'required|string',
@@ -41,22 +38,15 @@ class AdoptionApplicationController extends Controller
         $application->address = $request->address;
         $application->exp = $request->exp;
         $application->save();
-
-        //$adoption->user->notify(new ApplicationReceived($application));
-
         return redirect()->back()->with('success', 'Application submiited successfully!');
     }
 
     public function acceptApplication($applicationId)
     {
         $application = AdoptionApplication::findOrFail($applicationId);
-
         $application->status = 'accepted';
         $application->save();
-
         $application->adoption->delete();
-
-
         return redirect()->back()->with('success', 'Application accepted successfully!');
 
     }
@@ -64,12 +54,7 @@ class AdoptionApplicationController extends Controller
     public function rejectApplication($applicationId)
     {
         $application = AdoptionApplication::findOrFail($applicationId);
-
-
-        $application->status = 'rejected';
-        $application->save();
-
+        $application->delete();
         return redirect()->back()->with('success', 'Application rejected successfully!');
-
     }
 }

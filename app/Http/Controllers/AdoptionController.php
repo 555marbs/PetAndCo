@@ -39,7 +39,6 @@ class AdoptionController extends Controller
         } else {
             $validatedData['image'] = null;
         }
-
         $validatedData['user_id'] = auth()->user()->id;
 
         Adoption::create($validatedData);
@@ -50,7 +49,6 @@ class AdoptionController extends Controller
     {
         return Adoption::findOrFail($id);
     }
-
     public function update(Request $request, $id)
     {
         $adoptions = Adoption::findOrFail($id);
@@ -89,7 +87,6 @@ class AdoptionController extends Controller
         if (auth()->user()->id !== $adoption->user_id) {
             abort(403);
         }
-
         return view('dashboard.applications', ['adoption' => $adoption]);
     }
 
