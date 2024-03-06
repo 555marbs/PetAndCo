@@ -33,7 +33,7 @@ class Create extends Component
         $this->dispatchBrowserEvent('show-message', ['type' => 'success', 'message' => __('CreatedMessage', ['name' => __('Post') ])]);
         
         if($this->getPropertyValue('image') and is_object($this->image)) {
-            $this->image = $this->getPropertyValue('image')->store('image');
+            $this->image = $this->getPropertyValue('image')->store('/image');
         }
 
         Post::create([

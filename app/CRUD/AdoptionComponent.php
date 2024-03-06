@@ -62,6 +62,8 @@ class AdoptionComponent implements CRUDComponent
     // Where files will store for inputs
     public function storePaths()
     {
-        return [];
+        return [
+            'image' => '/storage/image'
+        ];
     }
 }

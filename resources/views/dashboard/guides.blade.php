@@ -12,7 +12,7 @@
         @foreach($posts as $post)
             <div class="col-md-4">
                 <div class="card">
-                    <img class="card-img-top" src="{{ asset('images/' . $post->image) }}">
+                    <img class="card-img-top" src="{{ asset($post->image) }}">
                     <div class="card-body">
                         <h5 class="card-title">{{ $post->title }}</h5>
                         <div class="dropdown-divider"></div>
