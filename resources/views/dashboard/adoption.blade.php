@@ -20,7 +20,7 @@
                             <p class="card-text">{{ $adoption->content }}</p>
                             <div class="dropdown-divider"></div>
                             <!-- Adopt button -->
-                            <a href="{{ route('adoption.application.form', ['adoption' => $adoption->id]) }}">Apply for Adoption</a>
+                            <button class="btn btn-primary" onclick="window.location.href='{{ route('adoption.application.form', ['adoption' => $adoption->id]) }}'" style= "text-align:center">Apply for Adoption</button>
                         </div>
                     </div>
                 </div>

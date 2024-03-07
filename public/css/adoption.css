@@ -9,14 +9,14 @@
     width: auto; /* Adjust the width as needed */
     padding: 15px;
     margin-bottom: 20px;
-    border-radius: 10px;
+    border-radius: 20px;
     overflow: hidden;
 }
-
 
 .card .card-body {
     padding: 10px;
 }
+
 
 .card h2.card-title {
     margin: 0;
@@ -32,6 +32,15 @@
     margin-top: 5px;
     font-size: 18px;
 }
+.navbar-bottom-button .btn-primary {
+    background-color: #a08a6e;
+    border-color: rgb(100, 77, 77);
+    color: white;
+}
 
+.navbar-bottom-button .btn-primary:hover {
+    background-color: #654321; 
+    border-color: #654321; /* Dark brown color */
+}
 
 
