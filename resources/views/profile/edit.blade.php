@@ -2,6 +2,11 @@
 @extends('navbars.dashboard-navbar')
 @section('styles')
     <!-- Your stylesheets -->
+    <style>
+        .card-body {
+            background-color:#B19470;
+        }
+    </style>
 @endsection
 
 @section('content')
@@ -9,7 +14,9 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">My Profile</div>
+                <div class="card-header" style= "text-align:center">
+                    My Profile
+                </div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -45,8 +52,8 @@
                             <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                         </div>
 
-                        <div class="form-group mb-0">
-                            <button type="submit" class="btn btn-primary">
+                        <div class="form-group mb-0" style="text-align:center;">
+                            <button type="submit" class="btn btn-primary" style="background-color:#a08a6e;">
                                 Update Profile
                             </button>
                         </div>
