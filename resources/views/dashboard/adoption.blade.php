@@ -18,9 +18,8 @@
                             <h2 class="card-title">{{ $adoption->title }}</h2>
                             <h5 class="card-text">{{ $adoption->contact }}</h5>
                             <p class="card-text">{{ $adoption->content }}</p>
-                            <div class="dropdown-divider"></div>
                             <!-- Adopt button -->
-                            <a href="{{ route('adoption.application.form', ['adoption' => $adoption->id]) }}">Apply for Adoption</a>
+                            <a href="{{ route('adoption.application.form', ['adoption' => $adoption->id]) }}" class="adoption-apply-button">Apply for Adoption</a>
                         </div>
                     </div>
                 </div>

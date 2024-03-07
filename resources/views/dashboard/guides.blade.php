@@ -13,7 +13,7 @@
             <div class="col-md-4">
                 <div class="card">
                     <img class="card-img-top" src="{{ asset($post->image) }}">
-                    <div class="card-body">
+                    <div class="card-details">
                         <h5 class="card-title">{{ $post->title }}</h5>
                         <div class="dropdown-divider"></div>
                         <p class="card-text">{{ $post->content }}</p>

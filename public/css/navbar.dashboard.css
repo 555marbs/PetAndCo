@@ -1,0 +1,36 @@
+/* Dropdown Menu Styles */
+.nav-item .dropdown-menu {
+    background-color: #B19470; /* Light theme; adjust if you have a dark theme */
+    border-radius: 0.25rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,.1); /* Soft shadow for depth */
+}
+
+/* Dropdown Item Styles */
+.nav-item .dropdown-menu .dropdown-item {
+    color: rgb(0, 0, 0); /* Dark gray for contrast */
+    transition: background-color 0.2s ease; /* Smooth transition for hover effect */
+    font-weight: 500;
+}
+
+/* Dropdown Item Hover & Focus Styles */
+.nav-item .dropdown-menu .dropdown-item:hover,
+.nav-item .dropdown-menu .dropdown-item:focus {
+    background-color: #775539; /* Slightly darker background on hover/focus */
+    color: #000000; /* Bootstrap primary color for highlight */
+}
+
+/* Dropdown Divider Style */
+.dropdown-divider {
+    margin: 0.5rem 0; /* Spacing around divider */
+}
+
+/* Log Out Button Style */
+.btn-link {
+    color: rgb(0, 0, 0); /* Consistent color */
+    text-decoration: none!important; /* Remove underline */
+    font-weight: 500;
+}
+
+.btn-link:hover {
+    color: #000000; /* Highlight on hover */
+}

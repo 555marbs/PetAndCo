@@ -8,6 +8,7 @@
     @yield('styles')
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ asset('css/navbar.dashboard.css')}}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
     <link rel="stylesheet" href="{{ asset('css/default.css')}}">
     <!-- jQuery library -->

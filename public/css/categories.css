@@ -1,55 +1,32 @@
-body {
-    padding-top: 70px;
-    /* Adjust body padding to accommodate fixed navbar */
+.container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+    justify-content: center; /* Centers the child elements horizontally */
+    align-items: center; /* Centers the child elements vertically */
+     /* Allows the items to wrap if needed */
+    height: 100vh; /* Takes up the full height of the viewport */
+}
 
-    /* Button styling */
-    .container {
-        margin-top: 20px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-    }
+.button {
+    margin: 10px; /* Adds some space around each button */
+    display: flex; /* Ensures that the buttons themselves are flex containers, helpful if you add more elements inside */
+    justify-content: center; /* Centers the content of the button horizontally */
+    align-items: center; /* Centers the content of the button vertically */
+}
 
-    /* Button styling */
-    .button {
-        position: relative;
-        cursor: pointer;
-        border: none;
-        background: none;
-        padding: 0;
-        margin: 10px;
-        /* Adjust margin as needed */
+.button a.card-link {
+    display: flex; /* Allows you to use flex properties on the link */
+    align-items: center; /* Centers the link's content vertically */
+    justify-content: center; /* Centers the link's content horizontally */
+    text-decoration: none; /* Optional: Removes underline from links */
+}
 
-        img {
-            width: 250px !important;
-            /* Adjust the width as needed */
-            height: auto;
-            border-radius: 5px;
-        }
-    }
+.button img {
+    width: 250px; /* Adjust image width as needed */
+    height: auto; /* Keeps the aspect ratio of the image */
+    transition: transform 0.2s; /* Optional: Adds a zoom effect on hover */
+}
 
-    /* Dropdown styling */
-    .dropdown {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        background-color: #775539;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        padding: 10px;
-        z-index: 1;
-    }
 
-    /* Show dropdown when button is clicked */
-    .button:hover .dropdown {
-        display: block;
-    }
-
+.button img:hover {
+    transform: scale(1.1); /* Optional: Zooms in the image a bit on hover */
 }

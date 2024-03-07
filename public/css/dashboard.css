@@ -18,7 +18,7 @@ body {
     border-radius: 10px;
     margin-right: 6%;
     padding: 25px;
-    background-color: #775539;
+    background-color: #B19470;
     transition: opacity 1s ease-in;
     transition: opacity 1s ease-out;
     max-width: 800px;
@@ -28,7 +28,6 @@ body {
     align-items: right;
     text-align: left;
     margin-top: 10px;
-    color: white;
     margin-left: 7%;
     margin-right: 5%;
     padding: 20px;
