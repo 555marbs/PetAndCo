@@ -33,23 +33,43 @@
     margin-top: 5px;
     font-size: 18px;
 }
+
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-primary {
+    background-color: #a08a6e !important;
+    color: white;
+    border-color: #654321 !important;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #775539 !important;
+    border-color: #775539 !important;
+    color: rgb(29, 29, 29);
+    transition: background-color 0.3s ease;
+}
 .card:hover {
     border-color: #775539;
     box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
 }
 
 .navbar-bottom-button .btn-primary {
-    background-color: #B19470;
-    border-color: #B19470;
-    color: rgb(29, 29, 29);
-    font-weight: 500;
+    background-color: #a08a6e;
+    border-color: rgb(100, 77, 77);
+    color: white;
 }
 
-.navbar-bottom-button .btn-primary:active {
-    background-color: #775539; /* Lighter blue */
-    border-color: #add8e6; /* Matching border color for consistency */
+.navbar-bottom-button .btn-primary:hover {
+    background-color: #654321; 
+    border-color: #654321; 
 }
-
 
 .navbar-bottom-button .btn-primary:hover {
     background-color: #775539;
@@ -57,31 +77,31 @@
     color: rgb(29, 29, 29);
 }
 
-/* Apply for Adoption Button Styles */
+
 .adoption-apply-button {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #775539; /* Primary button color */
-    color: white; /* Text color */
+    background-color: #775539;
+    color: white; 
     text-align: center;
-    text-decoration: none; /* Remove underline */
-    border-radius: 5px; /* Rounded corners */
-    transition: background-color 0.2s, transform 0.2s; /* Smooth transition for background color and transform */
-    border: none; /* No border */
-    cursor: pointer; /* Cursor changes to pointer to indicate clickable */
+    text-decoration: none; 
+    border-radius: 5px; 
+    transition: background-color 0.2s, transform 0.2s; 
+    border: none; 
+    cursor: pointer;
 }
 
 .adoption-apply-button:active {
-    background-color: #775539 !important; /* Light blue when pressed */
+    background-color: #775539 !important;
 }
 
 
 .adoption-apply-button:hover,
 .adoption-apply-button:focus {
-    background-color: #775539; /* Darker shade on hover/focus */
-    color: black; /* text color when hovering */
-    transform: translateY(-2px); /* Slight lift effect */
-    text-decoration: none; /* Ensure underline does not reappear */
+    background-color: #775539; 
+    color: black; 
+    transform: translateY(-2px);
+    text-decoration: none; 
 }
 
 
