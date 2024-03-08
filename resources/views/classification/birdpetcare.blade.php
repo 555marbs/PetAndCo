@@ -16,7 +16,7 @@
                 <div class="card">
                     <h2 class="card-title text-center my-3">Nutrition</h2>
                     <img src="/img/birdnutrition.jpg" alt="Button 1">
-                    <div class="card-body" style="height: 150px;"> <!-- Fixed height applied -->
+                    <div class="card-body" style="height: 150px;">
                         <ul>
                             <li>Offer a balanced diet appropriate for your bird's species.</li>
                             <li>Include seeds, pellets, fruits, vegetables, and occasional treats.</li>
@@ -30,7 +30,7 @@
                 <div class="card">
                     <h2 class="card-title text-center my-3">Clean environment</h2>
                     <img src="/img/cleanenvironmentbird.jpg" alt="Button 1">
-                    <div class="card-body" style="height: 150px;"> <!-- Fixed height applied -->
+                    <div class="card-body" style="height: 150px;">
                     <ul>
                         <li>Clean the cage daily, removing droppings and leftover food.</li>
                         <li>Deep clean the cage weekly with bird-safe cleaners.</li>
@@ -44,7 +44,7 @@
                 <div class="card">
                     <h2 class="card-title text-center my-3">Safe housing</h2>
                     <img src="/img/safehousingbird.jpg" alt="Button 1">
-                    <div class="card-body" style="height: 150px;"> <!-- Fixed height applied -->
+                    <div class="card-body" style="height: 150px;">
                     <ul>
                         <li>Provide a spacious and secure enclosure with appropriate perches.</li>
                         <li>Ensure cage bars are spaced to prevent escape or injury.</li>
@@ -58,7 +58,7 @@
                 <div class="card">
                     <h2 class="card-title text-center my-3">Social interaction</h2>
                     <img src="/img/socialinteractionbird.jpg" alt="Button 1">
-                    <div class="card-body" style="height: 150px;"> <!-- Fixed height applied -->
+                    <div class="card-body" style="height: 150px;">
                     <ul>
                         <li>Interact with your bird daily through talking, playing, and training.</li>
                         <li>Consider getting a companion bird for socialization.</li>
@@ -72,7 +72,7 @@
                 <div class="card">
                     <h2 class="card-title text-center my-3">Regular vet check-ups</h2>
                     <img src="/img/regularvetcarebird.jpg" alt="Button 1">
-                    <div class="card-body" style="height: 150px;"> <!-- Fixed height applied -->
+                    <div class="card-body" style="height: 150px;">
                     <ul>
                         <li>Schedule annual check-ups with an avian veterinarian.</li>
                         <li>Monitor your bird's health and detect issues early.</li>
@@ -87,7 +87,7 @@
                 <div class="card">
                     <h2 class="card-title text-center my-3">Environmental enrichment</h2>
                     <img src="/img/enrvironmentalbird.jpg" alt="Button 1">
-                    <div class="card-body" style="height: 150px;"> <!-- Fixed height applied -->
+                    <div class="card-body" style="height: 150px;">
                     <ul>
                         <li>Offer toys, puzzles, and foraging opportunities.</li>
                         <li>Rotate toys regularly to keep your bird engaged.</li>

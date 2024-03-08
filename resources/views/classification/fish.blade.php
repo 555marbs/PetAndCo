@@ -17,7 +17,7 @@
                 <div class="card">
                     <h2 class="card-title text-center my-3">PET CARE</h2>
                     <img src="/img/fishnobg.png" alt="Button 1">
-                    <div class="card-body" style="height: 150px;"> <!-- Fixed height applied -->
+                    <div class="card-body" style="height: 150px;">
                         <p class="card-text">Proper pet care for fish involves meticulous attention to detail to ensure their 
                             well-being in their aquatic environment. Begin by selecting an appropriately sized tank with suitable 
                             filtration and heating systems to maintain optimal water quality and temperature. Regularly test water 
@@ -31,7 +31,7 @@
                 <div class="card">
                     <h2 class="card-title text-center my-3">FISH BREEDS</h2>
                     <img src="/img/fishnobg.png" alt="Button 1">
-                    <div class="card-body" style="height: 150px;"> <!-- Fixed height applied -->
+                    <div class="card-body" style="height: 150px;">
                         <p class="card-text">Certainly! When it comes to fish kept as pets, there's a rich variety of 
                             species available, each offering its own unique beauty and characteristics. Goldfish, ranging from the
                              common goldfish to fancier varieties like the fantail or oranda, captivate with their vibrant colors and
@@ -47,7 +47,7 @@
                 <div class="card">
                     <h2 class="card-title text-center my-3">FISH GROOMING</h2>
                     <img src="/img/fishnobg.png" alt="Button 1">
-                    <div class="card-body" style="height: 150px;"> <!-- Fixed height applied -->
+                    <div class="card-body" style="height: 150px;">
                     <p class="card-text">Fish don't require grooming in the traditional sense, their care involves maintaining a clean and healthy aquatic environment.In 
                         a fish tank or aquarium, regular maintenance tasks such as water changes, filter cleaning, and substrate vacuuming serve as the
                          equivalent of grooming. These activities help remove excess waste, uneaten food, and other debris that can accumulate in the tank. </p>                

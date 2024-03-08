@@ -11,7 +11,7 @@
         <h1 class="section-title"><span class="highlight">DOG </span>GROOM</h1>
     </div>
     <div class="project-items row">
-        <!-- Card Code Starts Here -->
+     
         <div class="project-item col-lg-4 col-md-6 mb-4">
                 <div class="card">
                     <h2 class="card-title text-center my-3">Brushing</h2>
@@ -25,9 +25,7 @@
                 </div>
             </a>
         </div>
-        <!-- Card Code Ends Here -->
-        
-        <!-- Duplicate Card Code Starts Here -->
+
         <div class="project-item col-lg-4 col-md-6 mb-4">
                 <div class="card">
                     <h2 class="card-title text-center my-3">Bathing</h2>
@@ -40,9 +38,7 @@
                 </div>
             </a>
         </div>
-        <!-- Duplicate Card Code Ends Here -->
-        
-        <!-- Duplicate Card Code Starts Here -->
+       
         <div class="project-item col-lg-4 col-md-6 mb-4">
                 <div class="card">
                     <h2 class="card-title text-center my-3">Cleaning Ears</h2>
@@ -55,7 +51,6 @@
                 </div>
             </a>
         </div>
-        <!-- Duplicate Card Code Ends Here -->
         
     </div>
 </section>
