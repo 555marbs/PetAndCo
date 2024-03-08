@@ -45,6 +45,12 @@
     font-weight: 500;
 }
 
+.navbar-bottom-button .btn-primary:active {
+    background-color: #775539; /* Lighter blue */
+    border-color: #add8e6; /* Matching border color for consistency */
+}
+
+
 .navbar-bottom-button .btn-primary:hover {
     background-color: #775539;
     border-color: #775539;
@@ -64,6 +70,11 @@
     border: none; /* No border */
     cursor: pointer; /* Cursor changes to pointer to indicate clickable */
 }
+
+.adoption-apply-button:active {
+    background-color: #775539 !important; /* Light blue when pressed */
+}
+
 
 .adoption-apply-button:hover,
 .adoption-apply-button:focus {
