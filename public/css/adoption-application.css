@@ -17,6 +17,7 @@ form {
 
 h3 {
     margin-top: 20px;
+    text-align: center; /* Center aligns the text */
 }
 
 input[type="text"],
@@ -42,15 +43,20 @@ input[type="checkbox"] {
 }
 
 button[type="submit"] {
-    background-color: #4CAF50;
-    color: white;
-    padding: 12px 20px;
+    background-color: #a08a6e !important;
+    color: rgb(0, 0, 0) !important;
+    border-color: #654321 !important;
+    padding: 10px 20px;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
     cursor: pointer;
-    width: 100%;
+    display: block; /* Ensures the button takes up the full width */
+    margin: 10 auto; /* Centers the button horizontally */
 }
 
 button[type="submit"]:hover {
-    background-color: #45a049;
+    background-color: #775539 !important;
+    border-color: #775539 !important;
+    color: rgb(247, 243, 243) !important;
+    transition: background-color 0.3s ease;
 }
