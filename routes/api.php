@@ -1,8 +1,8 @@
 <?php
 
-use App\Http\Controllers\Api\AdoptionApplicationApiController;
-use App\Http\Controllers\AdoptionController;
+
 use App\Http\Controllers\api\AdoptionApplicationController;
+use App\Http\Controllers\Api\AdoptionController;
 use App\Http\Controllers\api\UserController;
 use App\Http\Controllers\Auth\UserAuthController;
 use App\Http\Controllers\PostController;
@@ -27,50 +27,36 @@ Route::post('posts', [PostController::class, 'store']);
 Route::put('posts', [PostController::class, 'update']);
 Route::delete('posts', [PostController::class, 'destroy']);
 
-/* Adoption */
-Route::resource('adoptions', AdoptionController::class);
-Route::get('adoption', [AdoptionController::class, 'get']);
-Route::post('adoption', [AdoptionController::class, 'store']);
-Route::put('adoption', [AdoptionController::class, 'update']);
-Route::delete('adoption', [AdoptionController::class, 'destroy']);
-
-Route::post('/adopt/{id}', [AdoptionController::class, 'adopt']);
-
-
-/* Login */
-Route::prefix('api')->group(function () {
-    Route::post('/login', [UserAuthController::class, 'login']);
-    Route::post('/logout', [UserAuthController::class, 'logout']);
-});
 
 /* User */
-Route::get('user', [UserController::class, 'user']);
-Route::post('user', [UserController::class, 'add']);
-Route::put('user', [UserController::class, 'update']);
-Route::delete('user/{id}', [UserController::class, 'delete']);
-Route::post('/login', [UserController::class, 'login']);
-Route::middleware(['auth:sanctum'])->group(function(){
-    Route::post('/logout', [UserController::class, 'logout']);
-    Route::post('/change_password', [UserController::class, 'change_password']);
-});
+Route::get('/user', [UserAuthController::class,'user']);
+Route::post('/register', [UserAuthController::class,'add']);
+Route::put('/update/{id}', [UserAuthController::class,'update']);
+Route::delete('/user/{id}', [UserAuthController::class,'delete']);
+
+/* User Authentication */
+Route::post('/login', [UserAuthController::class, 'login']);
+Route::post('/logout', [UserAuthController::class, 'logout'])->middleware('auth:sanctum');
+
+
 
 // Post Adoption
 Route::get('/adoptions', [AdoptionController::class, 'get']);
-Route::post('/adoptions', [AdoptionController::class, 'store'])->name('adoptions.store');
+Route::post('/adoptions', [AdoptionController::class, 'store'])->middleware('auth:sanctum');
 Route::get('/adoptions/{id}', [AdoptionController::class, 'show']);
 Route::put('/adoptions/{id}', [AdoptionController::class, 'update'])->middleware('auth:sanctum');
 Route::delete('/adoptions/{id}', [AdoptionController::class, 'destroy'])->middleware('auth:sanctum');
 Route::get('/adoptions/{adoptionId}/applications', [AdoptionController::class, 'viewApplications'])->middleware('auth:sanctum');
 
 // Show application form data
-Route::get('/adoptions/{adoptionId}/application', [AdoptionApplicationApiController::class, 'showApplicationForm'])->name('adoptions.application.show');
+Route::get('/adoptions/{adoptionId}/application', [AdoptionApplicationController::class, 'showApplicationForm'])->name('adoptions.application.show');
 
 // Submit an application
-Route::post('/adoptions/{adoptionId}/apply', [AdoptionApplicationApiController::class, 'submitApplication'])->name('adoptions.application.submit');
+Route::post('/adoptions/{adoptionId}/apply', [AdoptionApplicationController::class, 'submitApplication'])->name('adoptions.application.submit');
 
 // Accept an application
-Route::post('/applications/{applicationId}/accept', [AdoptionApplicationApiController::class, 'acceptApplication'])->name('applications.accept');
+Route::post('/applications/{applicationId}/accept', [AdoptionApplicationController::class, 'acceptApplication'])->name('applications.accept');
 
 // Reject (delete) an application
-Route::delete('/applications/{applicationId}', [AdoptionApplicationApiController::class, 'rejectApplication'])->name('applications.reject');
+Route::delete('/applications/{applicationId}', [AdoptionApplicationController::class, 'rejectApplication'])->name('applications.reject');
 

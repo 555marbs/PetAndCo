@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Api;
+namespace App\Http\Controllers\api;
 
 use App\Http\Controllers\Controller;
 use App\Models\Adoption;
@@ -9,12 +9,7 @@ use Illuminate\Http\Request;
 // Assume namespace and imports are defined here
 class AdoptionController extends Controller
 {
-    public function index()
-    {
-        // This method remains the same; ensure your API client can handle HTML responses if used for API
-        $adoptions = Adoption::all();
-        return view('dashboard.adoption', compact('adoptions'));
-    }
+
 
     public function get()
     {

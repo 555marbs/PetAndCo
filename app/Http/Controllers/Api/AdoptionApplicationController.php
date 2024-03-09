@@ -8,7 +8,7 @@ use App\Models\AdoptionApplication;
 use App\Http\Requests\AdoptionApplicationRequest;
 use Illuminate\Http\Request;
 
-class AdoptionApplicationApiController extends Controller
+class AdoptionApplicationController extends Controller
 {
     public function showApplicationForm($adoptionId)
     {

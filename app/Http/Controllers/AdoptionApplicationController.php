@@ -4,13 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Adoption;
 use App\Models\AdoptionApplication;
-use App\Http\Requests\AdoptionApplicationRequest;
-use Auth;
-use Notification;
-use App\Notifications\ApplicationReceived;
-use App\Notifications\ApplicationResponse;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Log;
 
 class AdoptionApplicationController extends Controller
 {
