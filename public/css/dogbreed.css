@@ -5,13 +5,8 @@
   font-family: sans-serif;
 }
 #content {
-<<<<<<< HEAD
   margin-top: 50px; /* Adjust the value as needed */
 }   
-=======
-  margin-top: 20px; /* Adjust the value as needed */
-}
->>>>>>> b8776db17f41f36759634acfe748377a97b29c8c
 
 body {
   margin-top: 50px;
@@ -45,6 +40,7 @@ body {
 
 .overlay {
   position: absolute;
+  text-align: center;
   bottom: 0;
   left: 0;
   right: 0;

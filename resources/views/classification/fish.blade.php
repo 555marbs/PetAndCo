@@ -15,9 +15,9 @@
         <div class="project-item col-lg-4 col-md-6 mb-4">
         <a href="{{ route('fishpet') }}" class="card-link">
                 <div class="card">
-                    <h2 class="card-title text-center my-3">PET CARE</h2>
-                    <img src="/img/fishnobg.png" alt="Button 1">
-                    <div class="card-body" style="height: 150px;">
+                    <h2 class="card-title text-center my-3"> FISH PET CARE</h2>
+                    <img src="/img/fishpetcare.jpg" alt="Button 1">
+                    <div class="card-body" style="height: 200px;">
                         <p class="card-text">Proper pet care for fish involves meticulous attention to detail to ensure their 
                             well-being in their aquatic environment. Begin by selecting an appropriately sized tank with suitable 
                             filtration and heating systems to maintain optimal water quality and temperature. Regularly test water 
@@ -30,8 +30,8 @@
         <a href="{{ route('fishkind') }}" class="card-link">
                 <div class="card">
                     <h2 class="card-title text-center my-3">FISH BREEDS</h2>
-                    <img src="/img/fishnobg.png" alt="Button 1">
-                    <div class="card-body" style="height: 150px;">
+                    <img src="/img/fishbreeds.jpg" alt="Button 1">
+                    <div class="card-body" style="height: 200px;">
                         <p class="card-text">Certainly! When it comes to fish kept as pets, there's a rich variety of 
                             species available, each offering its own unique beauty and characteristics. Goldfish, ranging from the
                              common goldfish to fancier varieties like the fantail or oranda, captivate with their vibrant colors and
@@ -45,12 +45,12 @@
         <div class="project-item col-lg-4 col-md-6 mb-4">
         <a href="{{ route('fishpage') }}" class="card-link">
                 <div class="card">
-                    <h2 class="card-title text-center my-3">FISH GROOMING</h2>
-                    <img src="/img/fishnobg.png" alt="Button 1">
-                    <div class="card-body" style="height: 150px;">
-                    <p class="card-text">Fish don't require grooming in the traditional sense, their care involves maintaining a clean and healthy aquatic environment.In 
-                        a fish tank or aquarium, regular maintenance tasks such as water changes, filter cleaning, and substrate vacuuming serve as the
-                         equivalent of grooming. These activities help remove excess waste, uneaten food, and other debris that can accumulate in the tank. </p>                
+                    <h2 class="card-title text-center my-3">FISH FOODS</h2>
+                    <img src="/img/fishheating.jpg" alt="Button 1">
+                    <div class="card-body" style="height: 200px;">
+                    <p class="card-text"> Fish have diverse dietary preferences depending on their species and natural habitat. Some fish, like herbivores, 
+                        primarily consume plant matter such as algae and aquatic vegetation. Examples include plecos and certain cichlids. Carnivorous fish, 
+                        on the other hand, primarily feed on meat, including insects, small fish, and crustaceans.  </p>                
                     </div>
                 </div>
             </a>

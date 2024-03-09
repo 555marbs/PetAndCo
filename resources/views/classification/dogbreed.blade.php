@@ -7,79 +7,79 @@
 
 @section('content')
 <div class="card">
-    <img src="/img/doglove.jpg" alt="Button 1">
+    <img src="/img/cavalierking.jpg" alt="Button 1">
     <div class="overlay">
-        <h2>Card title</h2>
+        <h2>Cavalier King Charles Spaniel</h2>
     </div>
 </div>
 
 <div class="card">
-    <img src="/img/doglove.jpg" alt="Button 1">
+    <img src="/img/bichonfrise.jpg" alt="Button 1">
     <div class="overlay">
-        <h2>Card title</h2>
+        <h2>Bichon Frise</h2>
     </div>
 </div>
 
 <div class="card">
-    <img src="/img/doglove.jpg" alt="Button 1">
+    <img src="/img/maltese.jpeg" alt="Button 1">
     <div class="overlay">
-        <h2>Card title</h2>
+        <h2>Maltese</h2>
     </div>
 </div>
 
 <div class="card">
-    <img src="/img/doglove.jpg" alt="Button 1">
+    <img src="/img/shihtzu.jpg" alt="Button 1">
     <div class="overlay">
-        <h2>Card title</h2>
+        <h2>Shih Tzu</h2>
     </div>
 </div>
 
 <div class="card">
-    <img src="/img/doglove.jpg" alt="Button 1">
+    <img src="/img/pug.jpg" alt="Button 1">
     <div class="overlay">
-        <h2>Card title</h2>
+        <h2>Pug</h2>
     </div>
 </div>
 
 <div class="card">
-    <img src="/img/doglove.jpg" alt="Button 1">
+    <img src="/img/frenchbulldog.jpg" alt="Button 1">
     <div class="overlay">
-        <h2>Card title</h2>
+        <h2>French Bulldog</h2>
     </div>
 </div>
 
 <div class="card">
-    <img src="/img/doglove.jpg" alt="Button 1">
+    <img src="/img/bostonterrier.jpg" alt="Button 1">
     <div class="overlay">
-        <h2>Card title</h2>
+        <h2>Boston Terrier</h2>
     </div>
 </div>
 
 <div class="card">
-    <img src="/img/doglove.jpg" alt="Button 1">
+    <img src="/img/cockerspaniel.jpeg" alt="Button 1">
     <div class="overlay">
-        <h2>Card title</h2>
+        <h2>Cocker Spaniel</h2>
     </div>
 </div>
 
 <div class="card">
-    <img src="/img/doglove.jpg" alt="Button 1">
+    <img src="/img/miniatureschnauzer.jpg" alt="Button 1">
     <div class="overlay">
-        <h2>Card title</h2>
+        <h2>Miniature Schnauzer</h2>
     </div>
 </div>
 
 <div class="card">
-    <img src="/img/doglove.jpg" alt="Button 1">
+    <img src="/img/havanese.jpg" alt="Button 1">
     <div class="overlay">
-        <h2>Card title</h2>
+        <h2>Havanese</h2>
     </div>
 </div>
 
-<div class="explore-more-btn-container">
+<!-- <div class="explore-more-btn-container">
     <a href="{{ route('dog') }}">
-     <button class="explore-more-btn">Explore More</button>
+        <button class="explore-more-btn">Explore More</button>
     </a>
-</div>
+</div> -->
 </section>
 @endsection

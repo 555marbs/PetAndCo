@@ -7,79 +7,79 @@
 
 @section('content')
 <div class="card">
-    <img src="/img/doglove.jpg" alt="Button 1">
+    <img src="/img/bettafish.jpg" alt="Button 1">
     <div class="overlay">
-        <h2>Card title</h2>
+        <h2>Betta Fish</h2>
     </div>
 </div>
 
 <div class="card">
-    <img src="/img/doglove.jpg" alt="Button 1">
+    <img src="/img/goldfish.jpg" alt="Button 1">
     <div class="overlay">
-        <h2>Card title</h2>
+        <h2>Goldfish</h2>
     </div>
 </div>
 
 <div class="card">
-    <img src="/img/doglove.jpg" alt="Button 1">
+    <img src="/img/neonteatra.jpg" alt="Button 1">
     <div class="overlay">
-        <h2>Card title</h2>
+        <h2>Neon Tetra</h2>
     </div>
 </div>
 
 <div class="card">
-    <img src="/img/doglove.jpg" alt="Button 1">
+    <img src="/img/guppy.jpg" alt="Button 1">
     <div class="overlay">
-        <h2>Card title</h2>
+        <h2>Guppy</h2>
     </div>
 </div>
 
 <div class="card">
-    <img src="/img/doglove.jpg" alt="Button 1">
+    <img src="/img/molly.jpg" alt="Button 1">
     <div class="overlay">
-        <h2>Card title</h2>
+        <h2>Molly</h2>
     </div>
 </div>
 
 <div class="card">
-    <img src="/img/doglove.jpg" alt="Button 1">
+    <img src="/img/platies.jpg" alt="Button 1">
     <div class="overlay">
-        <h2>Card title</h2>
+        <h2>Platies </h2>
     </div>
 </div>
 
 <div class="card">
-    <img src="/img/doglove.jpg" alt="Button 1">
+    <img src="/img/cherrybarb.jpg" alt="Button 1">
     <div class="overlay">
-        <h2>Card title</h2>
+        <h2>Cherry Barb  </h2>
     </div>
 </div>
 
 <div class="card">
-    <img src="/img/doglove.jpg" alt="Button 1">
+    <img src="/img/swordtail.jpg" alt="Button 1">
     <div class="overlay">
-        <h2>Card title</h2>
+        <h2>Swordtail Fish</h2>
     </div>
 </div>
 
 <div class="card">
-    <img src="/img/doglove.jpg" alt="Button 1">
+    <img src="/img/dwarf.jpg" alt="Button 1">
     <div class="overlay">
-        <h2>Card title</h2>
+        <h2>Dwarf Gourami </h2>
     </div>
 </div>
 
 <div class="card">
-    <img src="/img/doglove.jpg" alt="Button 1">
+    <img src="/img/corydorascatfish.jpg" alt="Button 1">
     <div class="overlay">
-        <h2>Card title</h2>
+        <h2>Corydoras Catfish </h2>
     </div>
 </div>
 
-<div class="explore-more-btn-container">
+<!-- <div class="explore-more-btn-container">
     <a href="{{ route('dog') }}">
-     <button class="explore-more-btn">Explore More</button>
+        <button class="explore-more-btn">Explore More</button>
     </a>
-</div>
+</div> -->
 </section>
 @endsection
