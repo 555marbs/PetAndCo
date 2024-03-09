@@ -18,6 +18,8 @@ use App\Http\Controllers\PostController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+/* Static Pages Route */
 Route::get('/home', [DashboardController::class, 'dashboard'])->name('dashboard');
 Route::get('/', [DashboardController::class, 'landing'])->name('landing');
 Route::get('/category', [DashboardController::class, 'category'])->name('categories');
@@ -34,6 +36,9 @@ Route::get('fishpet',[DashboardController::class, 'fishpet'])->name('fishpet');
 Route::get('fishkind',[DashboardController::class,'fishkind'])->name('fishkind');
 Route::get('fishstyle',[DashboardController::class,'fishstyle'])->name('fishstyle');
 Route::get('fishpage',[DashboardController::class,'fishpage'])->name('fishpage');
+/* End of Static Pages Route */
+
+
 Route::get('/adoption_post',[DashboardController::class,'adoption_create'])->name('adoption_create');
 
 
@@ -62,7 +67,7 @@ Route::get('/guides', [PostController::class, 'index'])->name('dashboard.guides'
 
 Route::get('/adoptions', [AdoptionController::class, 'index'])->name('dashboard.adoption');
 
-Route::post('/adoption_post', [AdoptionController::class, 'store'])->name('adoption.store');
+Route::post('/adoption_post', [AdoptionController::class, 'store'])->name('adoptions.store');
 
 // Route to show the adoption application form
 Route::get('/adoptions/{adoption}/apply', [AdoptionApplicationController::class, 'showApplicationForm'])->name('adoption.application.form');
@@ -75,7 +80,7 @@ Route::post('/applications/{application}/accept', [AdoptionApplicationController
 Route::post('/applications/{application}/reject', [AdoptionApplicationController::class, 'rejectApplication'])->name('adoption.application.reject');
 
 // Route for the pet owner to view received applications
-Route::get('/my-adoptions/{adoption}/applications', [AdoptionController::class, 'viewApplications'])->name('adoption.view.applications');
+Route::get('/my-adoptions/{adoption}/applications', [AdoptionController::class, 'viewApplications'])->name('adoption.applications');
 
 
 

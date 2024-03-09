@@ -2,8 +2,7 @@
 
 
 use App\Http\Controllers\api\AdoptionApplicationController;
-use App\Http\Controllers\Api\AdoptionController;
-use App\Http\Controllers\api\UserController;
+use App\Http\Controllers\api\AdoptionController;
 use App\Http\Controllers\Auth\UserAuthController;
 use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;

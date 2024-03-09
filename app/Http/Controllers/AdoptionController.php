@@ -3,8 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Adoption;
-use App\Mail\AdoptionRequestReceived;
-use Illuminate\Support\Facades\Mail;
 use Illuminate\Http\Request;
 
 class AdoptionController extends Controller
@@ -15,10 +13,6 @@ class AdoptionController extends Controller
         return view('dashboard.adoption', compact('adoptions'));
     }
 
-    public function get()
-    {
-        return Adoption::all();
-    }
 
     public function store(Request $request)
     {
@@ -40,15 +34,11 @@ class AdoptionController extends Controller
             $validatedData['image'] = null;
         }
         $validatedData['user_id'] = auth()->user()->id;
-        dd(auth()->user());
         Adoption::create($validatedData);
         return redirect('/adoptions');
     }
 
-    public function show($id)
-    {
-        return Adoption::findOrFail($id);
-    }
+
     public function update(Request $request, $id)
     {
         $adoptions = Adoption::findOrFail($id);
