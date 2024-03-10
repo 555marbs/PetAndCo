@@ -20,12 +20,12 @@
 
           <div class="form-group">
             <label>Email</label>
-            <input type="text" class="form-control" name="email" id="email">
+            <input type="text" class="form-control" name="email" id="email" maxlength="30">
           </div><!-- form-group -->
           <div class="form-group">
             <label>Password</label>
             <div class="input-group">
-              <input type="password" class="form-control" name="password" id="password">
+              <input type="password" class="form-control" name="password" id="password" maxlength="30">
               <div class="input-group-append">
                 <span class="input-group-text" id="togglePassword">
                   <i class="fa fa-eye" aria-hidden="true" onclick="togglePasswordVisibility()"></i>
