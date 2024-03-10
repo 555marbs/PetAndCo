@@ -71,15 +71,15 @@
             </div>
             <div class="form-group">
                 <label for="title">Title:</label>
-                <input type="text" name="title" id="title" required>
+                <input type="text" name="title" id="title" required maxlength="30">
             </div>
             <div class="form-group">
                 <label for="contact">Contact:</label>
-                <input type="text" name="contact" id="contact" required>
+                <input type="text" name="contact" id="contact" required maxlength="30">
             </div>
             <div class="form-group">
                 <label for="content">Content:</label>
-                <textarea name="content" id="content" rows="5" required></textarea>
+                <textarea name="content" id="content" rows="5" required maxlength="100"></textarea>
             </div>
             <a>
             <button type="submit">Submit</button>

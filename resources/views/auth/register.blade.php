@@ -21,16 +21,16 @@
                 <div class="form-group">
 
                     <input type="text" class="form-control" name="name" id="name"
-                        placeholder="Name">
+                        placeholder="Name" maxlength="30">
                 </div><!-- form-group -->
                 <div class="form-group">
                     <input type="email" class="form-control" name="email" id="email"
-                        placeholder="Email">
+                        placeholder="Email" maxlength="30">
                 </div><!-- form-group -->
                 <div class="form-group">
                     <div class="input-group">
                         <input type="password" class="form-control" name="password" id="password"
-                            placeholder="Create a Password">
+                            placeholder="Create a Password" maxlength="30">
                         <div class="input-group-append">
                             <span class="input-group-text" id="togglePassword">
                                 <i class="fa fa-eye" aria-hidden="true" onclick="togglePasswordVisibility()"></i>
@@ -41,7 +41,7 @@
                 <div class="form-group">
                     <div class="input-group">
                         <input type="password" class="form-control" name="password_confirmation"
-                            id="password_confirmation" placeholder="Confirm Password">
+                            id="password_confirmation" placeholder="Confirm Password" maxlength="30">
                         <div class="input-group-append">
                             <span class="input-group-text" id="toggleConfirmPassword">
                                 <i class="fa fa-eye" aria-hidden="true" onclick="toggleConfirmPasswordVisibility()"></i>
