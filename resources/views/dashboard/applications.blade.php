@@ -7,7 +7,7 @@
 
 @section('content')
 <div class="container">
-    <h2>Received Applications</h2>
+    <h2 class="page-title">RECEIVED APPLICATION</h2>
     @php $hasApplications = false; @endphp
     @foreach($groupedApplications as $adoptionId => $applications)
         @if($applications->first() && $applications->first()->adoption)
