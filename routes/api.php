@@ -47,15 +47,9 @@ Route::put('/adoptions/{id}', [AdoptionController::class, 'update'])->middleware
 Route::delete('/adoptions/{id}', [AdoptionController::class, 'destroy'])->middleware('auth:sanctum');
 Route::get('/adoptions/{adoptionId}/applications', [AdoptionController::class, 'viewApplications'])->middleware('auth:sanctum');
 
-// Show application form data
+// Application
 Route::get('/adoptions/{adoptionId}/application', [AdoptionApplicationController::class, 'showApplicationForm'])->name('adoptions.application.show');
-
-// Submit an application
-Route::post('/adoptions/{adoptionId}/apply', [AdoptionApplicationController::class, 'submitApplication'])->name('adoptions.application.submit');
-
-// Accept an application
-Route::post('/applications/{applicationId}/accept', [AdoptionApplicationController::class, 'acceptApplication'])->name('applications.accept');
-
-// Reject (delete) an application
+Route::post('/adoptions/{adoptionId}/apply', [AdoptionApplicationController::class, 'submitApplication'])->middleware('auth:sanctum');
+Route::post('/applications/{applicationId}/accept', [AdoptionApplicationController::class, 'acceptApplication'])->middleware('auth:sanctum');
 Route::delete('/applications/{applicationId}', [AdoptionApplicationController::class, 'rejectApplication'])->name('applications.reject');
 

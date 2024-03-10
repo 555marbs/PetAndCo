@@ -43,19 +43,24 @@ class AdoptionApplicationController extends Controller
     }
 
     public function acceptApplication($applicationId)
-    {
-        $application = AdoptionApplication::find($applicationId);
+{
+    $application = AdoptionApplication::find($applicationId);
 
-        if (!$application) {
-            return response()->json(['success' => false, 'message' => 'Application not found'], 404);
-        }
-
-        $application->status = 'accepted';
-        $application->save();
-        $application->adoption->delete();
-
-        return response()->json(['success' => true, 'message' => 'Application accepted successfully!'], 200);
+    if (!$application) {
+        return response()->json(['success' => false, 'message' => 'Application not found'], 404);
     }
+
+    $application->status = 'accepted';
+    $application->save();
+
+    // Check if the related adoption record exists before attempting to delete it
+    if ($application->adoption) {
+        $application->adoption->delete();
+    }
+
+    return response()->json(['success' => true, 'message' => 'Application accepted successfully!'], 200);
+}
+
 
     public function rejectApplication($applicationId)
     {
