@@ -1,6 +1,10 @@
 @extends('layouts.app')
 @extends('navbars.dashboard-navbar')
 
+@section('styles')
+    <link rel="stylesheet" href="{{ asset('css/application.css')}}">
+@endsection
+
 @section('content')
 <div class="container">
     <h2>Received Applications</h2>
