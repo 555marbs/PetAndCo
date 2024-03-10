@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Adoption;
+use App\Models\AdoptionApplication;
 use Illuminate\Http\Request;
 
 class AdoptionController extends Controller
@@ -70,14 +71,13 @@ class AdoptionController extends Controller
         return response()->json(['message' => 'Post deleted successfully']);
     }
 
-    public function viewApplications($adoptionId)
+    public function viewApplications()
     {
-        $adoption = Adoption::with('applications.user')->findOrFail($adoptionId);
+        $applications = AdoptionApplication::with('user', 'adoption')->get();
 
-        if (auth()->user()->id !== $adoption->user_id) {
-            abort(403);
-        }
-        return view('dashboard.applications', ['adoption' => $adoption]);
+        $groupedApplications = $applications->groupBy('adoption_id');
+
+        return view('dashboard.applications', ['groupedApplications' => $groupedApplications]);
     }
 
 

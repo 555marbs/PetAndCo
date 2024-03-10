@@ -32,7 +32,7 @@ class AdoptionApplicationController extends Controller
         $application->address = $request->address;
         $application->exp = $request->exp;
         $application->save();
-        return redirect()->back()->with('success', 'Application submiited successfully!');
+        return redirect('/adoptions');
     }
 
     public function acceptApplication($applicationId)
