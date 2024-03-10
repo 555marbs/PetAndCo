@@ -17,7 +17,7 @@ class AdoptionController extends Controller
     public function store(Request $request)
     {
         $validatedData = $request->validate([
-            'title' => 'required|string|max:255',
+            'title' => 'required|string|max:30',
             'content' => 'required|string',
             'contact' => 'required|string',
             'image' =>'image|mimes:jpeg,png,jpg,gif',
@@ -44,7 +44,7 @@ class AdoptionController extends Controller
         $adoptions = Adoption::findOrFail($id);
 
         $validatedData = $request->validate([
-            'title' => 'required|string|max:255',
+            'title' => 'required|string|max:30',
             'contact' => 'required|string|max:255',
             'content' => 'required|string',
             'image' =>'image|mimes:jpeg,png,jpg,gif|max:2048',

@@ -6,7 +6,7 @@
 }
 
 .card {
-    width: auto; /* Adjust the width as needed */
+    width: 300px; /* Adjust the width as needed */
     padding: 15px;
     margin-bottom: 20px;
     border-radius: 10px;
@@ -19,14 +19,17 @@
     padding: 10px;
 }
 
-.card h5.card-title {
+.card p.card-title {
     margin: 0;
     font-size: 24px;
+    font-weight: bolder;
+    text-align: left;
 }
 
 .card p.card-text {
     margin-top: 5px;
     font-size: 18px;
+    text-align: justify;
 }
 
 

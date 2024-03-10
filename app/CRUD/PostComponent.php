@@ -40,9 +40,8 @@ class PostComponent implements CRUDComponent
     public function inputs()
     {
         return [
-            'title' => 'text',
-            'content' => 'text',
-            'image' => 'file'
+            'title'=> 'text',
+            'content'=> 'text'
         ];
     }
 
@@ -51,17 +50,14 @@ class PostComponent implements CRUDComponent
     public function validationRules()
     {
         return [
-            'title' => 'required|max:100',
-            'content' => 'required',
-            'image' => 'required'
+            'title'=> 'required',
+            'content'=> 'required'
         ];
     }
 
     // Where files will store for inputs
     public function storePaths()
     {
-        return [
-            'image' => '/image'
-        ];
+        return [];
     }
 }

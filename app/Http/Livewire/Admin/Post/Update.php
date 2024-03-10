@@ -14,19 +14,16 @@ class Update extends Component
 
     public $title;
     public $content;
-    public $image;
     
     protected $rules = [
-        'title' => 'required|max:100',
-        'content' => 'required',
-        'image' => 'required',        
+        'title' => 'required',
+        'content' => 'required',        
     ];
 
     public function mount(Post $Post){
         $this->post = $Post;
         $this->title = $this->post->title;
-        $this->content = $this->post->content;
-        $this->image = $this->post->image;        
+        $this->content = $this->post->content;        
     }
 
     public function updated($input)
@@ -41,14 +38,9 @@ class Update extends Component
 
         $this->dispatchBrowserEvent('show-message', ['type' => 'success', 'message' => __('UpdatedMessage', ['name' => __('Post') ]) ]);
         
-        if($this->getPropertyValue('image') and is_object($this->image)) {
-            $this->image = $this->getPropertyValue('image')->store('/image');
-        }
-
         $this->post->update([
             'title' => $this->title,
             'content' => $this->content,
-            'image' => $this->image,
             'user_id' => auth()->id(),
         ]);
     }

@@ -25,15 +25,6 @@
                 <input type='text' id='input-content' wire:model.lazy='content' class="form-control  @error('content') is-invalid @enderror" placeholder='' autocomplete='on'>
                 @error('content') <div class='invalid-feedback'>{{ $message }}</div> @enderror
             </div>
-            <!-- Image Input -->
-            <div class='form-group'>
-                <label for='input-image' class='col-sm-2 control-label '> {{ __('Image') }}</label>
-                <input type='file' id='input-image' wire:model='image' class="form-control-file  @error('image') is-invalid @enderror">
-                @if($image and !$errors->has('image') and $image instanceof Illuminate\Http\UploadedFile and $image->isPreviewable())
-                    <a href="{{ $image->temporaryUrl() }}" target="_blank"><img width="200" height="200" class="mt-3 img-fluid shadow" src="{{ $image->temporaryUrl() }}" alt=""></a>
-                @endif
-                @error('image') <div class='invalid-feedback'>{{ $message }}</div> @enderror
-            </div>
 
         </div>
 

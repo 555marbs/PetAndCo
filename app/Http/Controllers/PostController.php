@@ -21,7 +21,7 @@ class PostController extends Controller
     public function store(Request $request)
     {
         $validatedData = $request->validate([
-            'title' => 'required|string|max:255',
+            'title' => 'required|string|max:30',
             'content' => 'required|string',
             'image' =>'image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
