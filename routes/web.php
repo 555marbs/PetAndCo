@@ -6,6 +6,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
+use App\Models\User;
 
 
 /*
@@ -84,7 +85,11 @@ Route::post('/applications/{application}/reject', [AdoptionApplicationController
 
 Route::get('/applications/all', [AdoptionController::class, 'viewApplications'])->name('applications.all');
 
+Route::get('/registration-count', function () {
+    $registrationCount = User::count();
 
+    return response()->json(['registrationCount' => $registrationCount]);
+});
 
 
 
