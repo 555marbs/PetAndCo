@@ -2,7 +2,8 @@
 
 @extends('navbars.dashboard-navbar')
 @section('styles')
-<link rel="stylesheet" href="{{ asset('css/adoption.css') }}"/>
+<!-- <link rel="stylesheet" href="{{ asset('css/adoption.css') }}"/> -->
+<!-- External CSS nalang to  -->
 <style>
     .container {
         display: flex;
@@ -15,7 +16,7 @@
         padding: 20px;
         border: 1px solid #ccc;
         border-radius: 5px;
-        background-color: #f9f9f9;
+        background-color: #B19470 !important;
     }
     .post-form h2 {
         text-align: center;
@@ -40,14 +41,21 @@
         height: 100px;
     }
     .form-group button {
-        width: 100%;
-        padding: 10px;
-        background-color: #007bff;
-        color: #fff;
-        border: none;
-        border-radius: 3px;
-        cursor: pointer;
-    }
+    width: 100%;
+    padding: 10px;
+    background-color: #B19470 !important;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    display: block; 
+    margin: 0 auto;
+    transition: background-color 0.3s ease;
+}
+
+.form-group button:hover {
+    background-color: #0056b3;
+}
 </style>
 @endsection
 @section('content')
