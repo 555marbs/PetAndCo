@@ -76,11 +76,13 @@ Route::get('/adoptions/{adoption}/apply', [AdoptionApplicationController::class,
 Route::post('/adoptions/{adoption}/apply', [AdoptionApplicationController::class, 'submitApplication'])->name('adoption.application.submit');
 
 // Routes for the pet owner to accept or reject applications
-Route::post('/applications/{application}/accept', [AdoptionApplicationController::class, 'acceptApplication'])->name('adoption.application.accept');
-Route::post('/applications/{application}/reject', [AdoptionApplicationController::class, 'rejectApplication'])->name('adoption.application.reject');
+Route::post('/applications/{application}/accept', [AdoptionApplicationController::class, 'acceptApplication'])->name('application.accept');
+Route::post('/applications/{application}/reject', [AdoptionApplicationController::class, 'rejectApplication'])->name('application.reject');
 
 // Route for the pet owner to view received applications
-Route::get('/my-adoptions/{adoption}/applications', [AdoptionController::class, 'viewApplications'])->name('adoption.applications');
+//Route::get('/my-adoptions/{adoption}/applications', [AdoptionController::class, 'viewApplications'])->name('adoption.applications');
+
+Route::get('/applications/all', [AdoptionController::class, 'viewApplications'])->name('applications.all');
 
 
 
