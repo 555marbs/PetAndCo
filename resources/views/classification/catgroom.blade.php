@@ -45,7 +45,7 @@
                     <h2 class="card-title text-center my-3">Eye care</h2>
                     <img src="/img/eyecarecat.jpg" alt="Button 1">
                     <div class="card-body" style="height: 150px;"> 
-                        <p class="card-text">: Keep your cat's eyes clean by gently wiping away any discharge with a soft, damp cloth. If you notice 
+                        <p class="card-text">Keep your cat's eyes clean by gently wiping away any discharge with a soft, damp cloth. If you notice 
                             excessive tearing, redness, or other signs of irritation, consult your veterinarian.</p>
                     </div>
                 </div>
