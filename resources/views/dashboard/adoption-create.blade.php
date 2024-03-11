@@ -75,7 +75,7 @@
             </div>
             <div class="form-group">
                 <label for="contact">Contact:</label>
-                <input type="text" name="contact" id="contact" required maxlength="30">
+                <input type="text" name="contact" id="contact" required maxlength="30" required pattern="^[0-9]+$">
             </div>
             <div class="form-group">
                 <label for="content">Content:</label>
