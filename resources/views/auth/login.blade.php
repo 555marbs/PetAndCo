@@ -37,7 +37,6 @@
         </form>
       </div><!-- az-signin-header -->
       <div class="az-signin-footer">
-        <p><a href="{{ route('password.request') }}">Forgot password?</a></p>
         <p>Don't have an account? <a href="{{ route('register') }}">Create an Account</a></p>
       </div><!-- az-signin-footer -->
     </div><!-- az-card-signin -->
