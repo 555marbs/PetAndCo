@@ -21,16 +21,16 @@ class AdoptionController extends Controller
             'title' => 'required|string|max:30',
             'content' => 'required|string',
             'contact' => 'required|string',
-            'image' =>'image|mimes:jpeg,png,jpg,gif',
+            'image' => 'image|mimes:jpeg,png,jpg,gif',
 
         ]);
 
 
         if ($request->hasFile('image')) {
             $image = $request->file('image');
-            $imageName = time().'.'.$image->getClientOriginalExtension();
-            $image->move(storage_path('app/public/image'), $imageName);
-            $validatedData['image'] = '/storage/image/'.$imageName;
+            $imageName = time() . '.' . $image->getClientOriginalExtension();
+            $image->move(public_path('image'), $imageName);
+            $validatedData['image'] = '/' . $imageName;
         } else {
             $validatedData['image'] = null;
         }
@@ -48,14 +48,14 @@ class AdoptionController extends Controller
             'title' => 'required|string|max:30',
             'contact' => 'required|string|max:255',
             'content' => 'required|string',
-            'image' =>'image|mimes:jpeg,png,jpg,gif|max:2048',
+            'image' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
 
         if ($request->hasFile('image')) {
             $image = $request->file('image');
-            $imageName = time().'.'.$image->extension();
-            $image->move(storage_path('app/public/image'), $imageName);
-            $validatedData['image'] = '/storage/image/'.$imageName;
+            $imageName = time() . '.' . $image->extension();
+            $image->move(public_path('image'), $imageName);
+            $validatedData['image'] = '/' . $imageName;
         }
 
         $adoptions->update($validatedData);
@@ -73,13 +73,16 @@ class AdoptionController extends Controller
 
     public function viewApplications()
     {
-        $applications = AdoptionApplication::with('user', 'adoption')->get();
+        // Assuming you can get the currently authenticated user's ID
+        $userId = auth()->id();
+
+        // Fetch only the adoption applications related to adoptions posted by the currently authenticated user
+        $applications = AdoptionApplication::whereHas('adoption', function ($query) use ($userId) {
+            $query->where('user_id', $userId);
+        })->with('user', 'adoption')->get();
 
         $groupedApplications = $applications->groupBy('adoption_id');
 
         return view('dashboard.applications', ['groupedApplications' => $groupedApplications]);
     }
-
-
-
 }

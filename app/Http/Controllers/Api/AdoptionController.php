@@ -29,8 +29,8 @@ class AdoptionController extends Controller
         if ($request->hasFile('image')) {
             $image = $request->file('image');
             $imageName = time().'.'.$image->getClientOriginalExtension();
-            $image->move(storage_path('app/public/image'), $imageName);
-            $validatedData['image'] = '/storage/image/'.$imageName;
+            $image->move(public_path('image'), $imageName);
+            $validatedData['image'] = '/'.$imageName;
         } else {
             $validatedData['image'] = null;
         }
@@ -64,8 +64,8 @@ class AdoptionController extends Controller
         if ($request->hasFile('image')) {
             $image = $request->file('image');
             $imageName = time().'.'.$image->extension();
-            $image->move(storage_path('app/public/image'), $imageName);
-            $validatedData['image'] = '/storage/image/'.$imageName;
+            $image->move(public_path('image'), $imageName);
+            $validatedData['image'] = '/'.$imageName;
         }
 
         $adoptions->update($validatedData);

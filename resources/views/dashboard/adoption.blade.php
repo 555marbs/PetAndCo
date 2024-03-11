@@ -12,7 +12,7 @@
             @foreach ($adoptions as $adoption)
                 <div class="col-md-4">
                     <div class="card">
-                        <img class="card-img-top" src="{{ asset($adoption->image) }}"
+                        <img class="card-img-top" src="{{ asset('image/'.$adoption->image) }}"
                             alt="{{ $adoption->title }}">
                         <div class="card-body">
                             <h2 class="card-title">{{ $adoption->title }}</h2>
@@ -21,7 +21,7 @@
                             <div class="dropdown-divider"></div>
                             <div class="button-container">
                                    <button class="btn btn-primary center-btn" onclick="window.location.href='{{ route('adoption.application.form', ['adoption' => $adoption->id]) }}'">Apply for Adoption</button>
-                            </div>                        
+                            </div>
                             </div>
                     </div>
                 </div>
