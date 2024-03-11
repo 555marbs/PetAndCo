@@ -17,7 +17,7 @@
             @endphp
             <h3>{{ $adoption->title }}</h3>
             @foreach($applications as $application)
-                <div class="card mb-3">
+                
                     <div class="card-body">
                         <h5 class="card-title">{{ $application->user->name }}</h5>
                         <p class="card-text">{{ $application->fullname }}</p>
@@ -33,7 +33,7 @@
                             <button type="submit" class="btn btn-danger">Reject</button>
                         </form>
                     </div>
-                </div>
+
             @endforeach
         @endif
     @endforeach

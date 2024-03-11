@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
 use Illuminate\View\View;
+use Illuminate\Support\Facades\Cache;
 
 class RegisteredUserController extends Controller
 {
@@ -47,5 +48,14 @@ class RegisteredUserController extends Controller
         Auth::login($user);
 
         return redirect(RouteServiceProvider::HOME);
+    }
+
+    protected function incrementRegistrationCount(): void
+    {
+        $registrationCount = Cache::get('registration_count', 0);
+
+        $registrationCount++;
+
+        Cache::put('registration_count', $registrationCount);
     }
 }
