@@ -43,7 +43,7 @@
         <div class="project-item col-lg-4 col-md-6 mb-4">
                 <div class="card">
                     <h2 class="card-title text-center my-3">Safe housing</h2>
-                    <img src="/img/safehousingbird.jpg" alt="Button 1">
+                    <img src="/img/smallbird.jpg" alt="Button 1">
                     <div class="card-body" style="height: 150px;">
                     <ul>
                         <li>Provide a spacious and secure enclosure with appropriate perches.</li>

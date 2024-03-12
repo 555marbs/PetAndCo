@@ -70,7 +70,7 @@
 </div>
 
 <div class="card">
-    <img src="/img/havanese.jpg" alt="Button 1">
+    <img src="/img/burmese.jpg" alt="Button 1">
     <div class="overlay">
         <h2>Burmese</h2>
     </div>

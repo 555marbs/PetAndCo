@@ -29,7 +29,7 @@
         <div class="project-item col-lg-4 col-md-6 mb-4">
                 <div class="card">
                     <h2 class="card-title text-center my-3">Pellets</h2>
-                    <img src="/img/pellets.png" alt="Button 1">
+                    <img src="/img/pellets.jpg" alt="Button 1">
                     <div class="card-body" style="height: 150px;"> 
                         <p class="card-text">Pelleted fish food is another popular option for feeding aquarium fish. These pellets often sink slowly, 
                             allowing fish at different water levels to feed. Pellets come in various sizes and formulas, including sinking pellets 
@@ -42,8 +42,8 @@
         
         <div class="project-item col-lg-4 col-md-6 mb-4">
                 <div class="card">
-                    <h2 class="card-title text-center my-3">Frozen or Freeze-Dried Foods</h2>
-                    <img src="/img/dried.png" alt="Button 1">
+                    <h2 class="card-title text-center my-3">Freeze-Dried Foods</h2>
+                    <img src="/img/driedfoods.png" alt="Button 1">
                     <div class="card-body" style="height: 150px;"> 
                         <p class="card-text"> Frozen or freeze-dried foods provide a nutritious treat for aquarium fish. Common options include bloodworms, 
                             brine shrimp, and daphnia. These foods offer a natural diet similar to what fish would consume in the wild and can enhance their 

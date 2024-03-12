@@ -12,9 +12,15 @@
     margin-bottom: 20px;
     border-radius: 20px;
     overflow: hidden;
-    background-color: #B19470 !important;
+    background-color: #B19470 !important;   
+    transition: transform 0.3s ease-in-out;
+
     height: 650px; /* Adjust the height as per your requirement */
 
+}
+
+.card:hover {
+    transform: translateY(-5px);
 }
 
 .card .card-body {
