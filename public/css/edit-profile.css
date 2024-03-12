@@ -1,0 +1,74 @@
+.container {
+    padding: 20px;
+}
+
+/* Card styling */
+.card {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #B19470 !important;
+}
+
+.card-header {
+    background-color: #B19470 !important;
+    color: #333;
+    padding: 15px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.card-body {
+    padding: 20px;
+    background-color: #B19470;
+}
+
+/* Form styling */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.form-control {
+    border: 1px solid #ded0b6 !important;
+    border-radius: 4px;
+    padding: 10px;
+    width: 100%;
+    color: black !important;
+    background-color: #ded0b6 !important;
+}
+
+.form-control:focus {
+    outline: none !important;
+}
+
+/* Button styling */
+.btn-primary {
+    background-color: #ded0b6 !important;
+    color: black !important;
+    padding: 10px 20px;
+    border: none !important;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: background-color 0.3s ease !important;
+}
+
+.btn-primary:hover {
+    background-color: #775539 !important;
+}
+
+/* Alert styling */
+.alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}

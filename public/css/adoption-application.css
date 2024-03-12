@@ -33,6 +33,21 @@ textarea {
     box-sizing: border-box;
     background-color: #DED0B6;
 }
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+textarea:focus {
+    outline: none;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+textarea::placeholder {
+    color: black;
+}
 
 textarea {
     resize: vertical;
@@ -43,7 +58,7 @@ input[type="checkbox"] {
 }
 
 button[type="submit"] {
-    background-color: #a08a6e !important;
+    background-color: #DED0B6 !important;
     color: rgb(0, 0, 0) !important;
     border-color: #654321 !important;
     padding: 10px 20px;

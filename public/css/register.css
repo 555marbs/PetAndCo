@@ -48,14 +48,15 @@ body {
     font-weight: 500;
     border-width: 2px;
     border-radius: 5px;
-    border-color: #775539;
-    background-color: #B19470 !important;
+    border-color: #DED0B6;
+    background-color: #DED0B6 !important;
 }
 
 .az-signin-header .form-control:focus {
-    border-color: #775539;
+    border-color: #DED0B6;
+    outline: none;
     color: #000000;
-    background-color: #B19470 !important;
+    background-color: #DED0B6 !important;
 }
 
 .az-signin-header .form-control::placeholder {
@@ -75,7 +76,12 @@ body {
 }
 
 .az-signin-header .btn:hover {
-    background-color: #775539; /* Change background color on hover */
+    background-color: #775539;
+}
+
+.az-signin-header .btn:focus {
+    outline: none !important;
+    border-color: #775539;
 }
 
 .az-signin-footer p {

@@ -45,20 +45,21 @@ body {
     width: 100%;
     padding: 10px;
     margin-top: 5px;
-    border: 2px solid #775539; /* Adjust the color to match the image */
+    border: 2px solid #DED0B6; /* Adjust the color to match the image */
     border-radius: 5px;
-    background-color: #B19470 !important;
+    background-color: #DED0B6 !important;
 }
 
 .input-group input:focus {
     outline: none;
-    border-color: #775539; /* Adjust to use your primary color or another color that indicates focus */
-    background-color: #B19470 !important;
+    border-color: #DED0B6;
+    background-color: #DED0B6 !important;
 }
 
 button {
     width: 100%;
     padding: 10px;
+    margin-top: 20px !important;
     background-color: #DED0B6; /* Adjust the color to match the image */
     color: #000000;
     border: none;

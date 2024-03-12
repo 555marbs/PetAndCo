@@ -22,14 +22,14 @@
         <!-- Applicant Information -->
         <h3>Applicant Information</h3>
         <input type="text" name="fullname" placeholder="Full Name" required maxlength="30">
-        <input type="text" name="tel" placeholder="Phone Number or Social Media Address" required maxlength="30"> 
-        <input type="text" name="address" placeholder="Complete Address" required maxlength="30">
+        <input type="text" name="tel" placeholder="Phone Number or Social Media Address" required maxlength="30">
+        <input type="text" name="address" placeholder="Complete Address" required maxlength="50">
         <!-- Add more fields as needed for address -->
 
         <!-- Pet Preferences -->
         <h3>Experience as a Pet Owner</h3>
         <label for="petExperience">Do you have a experience to have a pet? If Yes, elaborate it.</label>
-        <textarea id="petExperience" name="exp" required maxlength="30"></textarea>
+        <textarea id="petExperience" name="exp" required maxlength="150"></textarea>
 
         <!-- Submit Button -->
         <button type="submit">Submit</button>

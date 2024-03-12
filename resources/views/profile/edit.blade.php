@@ -1,12 +1,7 @@
 @extends('layouts.app')
 @extends('navbars.dashboard-navbar')
 @section('styles')
-    <!-- Your stylesheets -->
-    <style>
-        .card-body {
-            background-color:#B19470;
-        }
-    </style>
+    <link rel="stylesheet" href="{{ asset('css/edit-profile.css')}}">"
 @endsection
 
 @section('content')
@@ -53,7 +48,7 @@
                         </div>
 
                         <div class="form-group mb-0" style="text-align:center;">
-                            <button type="submit" class="btn btn-primary" style="background-color:#a08a6e;">
+                            <button type="submit" class="btn btn-primary">
                                 Update Profile
                             </button>
                         </div>

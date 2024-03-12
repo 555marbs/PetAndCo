@@ -26,9 +26,10 @@
 
 /* Log Out Button Style */
 .btn-link {
-    color: rgb(0, 0, 0); /* Consistent color */
-    text-decoration: none!important; /* Remove underline */
+    color: rgb(0, 0, 0);
+    text-decoration: none !important;
     font-weight: 500;
+    width: max-content;
 }
 
 .btn-link:hover {
