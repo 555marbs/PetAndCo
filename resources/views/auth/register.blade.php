@@ -19,16 +19,16 @@
                 <div class="form-group">
 
                     <input type="text" class="form-control" name="name" id="name"
-                        placeholder="Name" maxlength="30">
+                        placeholder="Name" maxlength="30" required>
                 </div><!-- form-group -->
                 <div class="form-group">
                     <input type="email" class="form-control" name="email" id="email"
-                        placeholder="Email" maxlength="40">
+                        placeholder="Email" maxlength="40" required>
                 </div><!-- form-group -->
                 <div class="form-group">
                     <div class="input-group">
                         <input type="password" class="form-control" name="password" id="password"
-                            placeholder="Create a Password" maxlength="30">
+                            placeholder="Create a Password" maxlength="30" required>
                         <div class="input-group-append">
                         </div>
                     </div><!-- input-group -->
@@ -36,7 +36,7 @@
                 <div class="form-group">
                     <div class="input-group">
                         <input type="password" class="form-control" name="password_confirmation"
-                            id="password_confirmation" placeholder="Confirm Password" maxlength="30">
+                            id="password_confirmation" placeholder="Confirm Password" maxlength="30" required>
                     </div>
                 </div><!-- form-group -->
                 <button type="submit" class="btn btn-az-primary btn-block">Register</button>
