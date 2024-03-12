@@ -85,14 +85,13 @@ Route::post('/applications/{application}/reject', [AdoptionApplicationController
 
 Route::get('/applications/all', [AdoptionController::class, 'viewApplications'])->name('applications.all');
 
+
+// Admin Statistics
 Route::get('/registration-count', function () {
     $registrationCount = User::count();
 
     return response()->json(['registrationCount' => $registrationCount]);
 });
-
-
-
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
