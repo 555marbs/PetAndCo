@@ -86,5 +86,11 @@
     "Email": "Email",
     "Password": "Password",
     "User": "User",
-    "Users": "Users"
+    "Users": "Users",
+    "Fullname": "Fullname",
+    "Tel": "Tel",
+    "Address": "Address",
+    "Exp": "Exp",
+    "AdoptionApplication": "AdoptionApplication",
+    "AdoptionApplications": "AdoptionApplications"
 }

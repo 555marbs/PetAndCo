@@ -12,7 +12,7 @@
                         <span class="hide-menu">{{ __('Home') }}</span>
                     </a>
                 </li>
-
+                <!--
                 @if(hasPermission(getRouteName().'.crud.lists', true))
                 <li class="sidebar-item @isActive([getRouteName().'.crud.lists', getRouteName().'.crud.create'], 'selected')">
                     <a class="sidebar-link @isActive([getRouteName().'.crud.lists', getRouteName().'.crud.create'], 'active') " href="@route(getRouteName().'.crud.lists')" aria-expanded="false">
@@ -48,6 +48,7 @@
                     </a>
                 </li>
                 @endif
+                -->
 
                 @include('admin::layouts.child-sidebar-menu')
 

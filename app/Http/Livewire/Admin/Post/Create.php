@@ -14,8 +14,8 @@ class Create extends Component
     public $content;
     
     protected $rules = [
-        'title' => 'required',
-        'content' => 'required',        
+        'title' => 'required|max:30',
+        'content' => 'required|max:255',        
     ];
 
     public function updated($input)

@@ -15,21 +15,18 @@ class Update extends Component
     public $title;
     public $content;
     public $contact;
-    public $image;
     
     protected $rules = [
-        'title' => 'required|max:100',
-        'content' => 'required',
-        'contact' => 'required',
-        'image' => 'required',        
+        'title' => 'required|max:40',
+        'content' => 'required|max:255',
+        'contact' => 'required|max:40',        
     ];
 
     public function mount(Adoption $Adoption){
         $this->adoption = $Adoption;
         $this->title = $this->adoption->title;
         $this->content = $this->adoption->content;
-        $this->contact = $this->adoption->contact;
-        $this->image = $this->adoption->image;        
+        $this->contact = $this->adoption->contact;        
     }
 
     public function updated($input)
@@ -44,15 +41,8 @@ class Update extends Component
 
         $this->dispatchBrowserEvent('show-message', ['type' => 'success', 'message' => __('UpdatedMessage', ['name' => __('Adoption') ]) ]);
         
-        if($this->getPropertyValue('image') and is_object($this->image)) {
-            $this->image = $this->getPropertyValue('image')->store('/storage/image');
-        }
-
         $this->adoption->update([
-            'title' => $this->title,
-            'content' => $this->content,
-            'contact' => $this->contact,
-            'image' => $this->image,            
+            'title' => $this->title,            'content' => $this->content,            'contact' => $this->contact,            
         ]);
     }
 

@@ -40,10 +40,9 @@ class AdoptionComponent implements CRUDComponent
     public function inputs()
     {
         return [
-            'title' => 'text',
-            'content' => 'text',
-            'contact' => 'text',
-            'image' => 'file'
+            'title'=> 'text',
+            'content'=> 'text',
+            'contact'=> 'text'
         ];
     }
 
@@ -52,18 +51,15 @@ class AdoptionComponent implements CRUDComponent
     public function validationRules()
     {
         return [
-            'title' => 'required|max:100',
-            'content' => 'required',
-            'contact' => 'required',
-            'image' => 'required'
+            'title'=> 'required|max:40',
+            'content'=> 'required|max:255',
+            'contact'=> 'required|max:40'
         ];
     }
 
     // Where files will store for inputs
     public function storePaths()
     {
-        return [
-            'image' => '/storage/image'
-        ];
+        return [];
     }
 }

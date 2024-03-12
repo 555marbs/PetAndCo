@@ -50,8 +50,8 @@ class PostComponent implements CRUDComponent
     public function validationRules()
     {
         return [
-            'title'=> 'required',
-            'content'=> 'required'
+            'title'=> 'required|max:30',
+            'content'=> 'required|max:255'
         ];
     }
 
