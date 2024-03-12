@@ -12,7 +12,7 @@
     margin-bottom: 20px;
     border-radius: 20px;
     overflow: hidden;
-    background-color: #B19470 !important;   
+    background-color: #B19470 !important;
     transition: transform 0.3s ease-in-out;
 
     height: 650px; /* Adjust the height as per your requirement */
@@ -49,9 +49,9 @@
 }
 
 .btn-primary {
-    background-color: #a08a6e !important;
+    background-color: #DED0B6 !important;
     color: rgb(0, 0, 0) !important;
-    border-color: #654321 !important;
+    border-color: #DED0B6 !important;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -69,35 +69,22 @@
     box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
 }
 
-.navbar-bottom-button .btn-primary {
-    background-color: #a08a6e;
-    border-color: rgb(100, 77, 77);
-    color: white;
+
+.btn-primary {
+    background-color: #B19470 !important;
 }
 
-.navbar-bottom-button .btn-primary:hover {
-    background-color: #654321; 
-    border-color: #654321; 
-}
-
-.navbar-bottom-button .btn-primary:hover {
-    background-color: #775539;
-    border-color: #775539;
-    color: rgb(29, 29, 29);
+.btn-primary:hover {
+    color: black !important;
 }
 
 
-.adoption-apply-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #775539;
-    color: white; 
-    text-align: center;
-    text-decoration: none; 
-    border-radius: 5px; 
-    transition: background-color 0.2s, transform 0.2s; 
-    border: none; 
-    cursor: pointer;
+.btn-primary-adopt {
+    background-color: #DED0B6 !important;
+}
+
+.btn-primary-adopt:hover {
+    background-color: #775539 !important;
 }
 
 .adoption-apply-button:active {
@@ -107,10 +94,10 @@
 
 .adoption-apply-button:hover,
 .adoption-apply-button:focus {
-    background-color: #775539; 
-    color: black; 
+    background-color: #775539;
+    color: black;
     transform: translateY(-2px);
-    text-decoration: none; 
+    text-decoration: none;
 }
 
 
