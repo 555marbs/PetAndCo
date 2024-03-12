@@ -7,7 +7,7 @@
 
 @section('content')
 <div class="card">
-    <img src="/img/cavalierking.jpg" alt="Button 1">
+    <img src="/img/kingcavalier.jpg" alt="Button 1">
     <div class="overlay">
         <h2>Cavalier King Charles Spaniel</h2>
     </div>

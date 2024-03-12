@@ -37,7 +37,6 @@
                     <ul>
                         <li>Provide appropriate lighting for the fish and plants in the tank.</li>
                         <li>Maintain a consistent lighting schedule to mimic natural day-night cycles.</li>
-                        <li>Avoid excessive light exposure, as it can promote algae growth and stress fish.</li>
                     </ul>                  
                     </div>
                 </div>
