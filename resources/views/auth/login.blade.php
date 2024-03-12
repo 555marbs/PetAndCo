@@ -24,7 +24,7 @@
             <button type="submit">Sign In</button>
         </form>
         <div class="login-footer">
-            <p>Don't have an account? <a href="path-to-sign-up">Create an Account</a></p>
+            <p>Don't have an account? <a href="{{ asset ('register')}}">Create an Account</a></p>
         </div>
     </div>
 @endsection
