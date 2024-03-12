@@ -2,8 +2,6 @@
 
 @section('styles')
 <link rel="stylesheet" href="{{ asset('css/register.css') }}">
-<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 @endsection
 
 
@@ -13,41 +11,33 @@
             <img src="/img/logo.png" alt="Pet&Co.">
         </a>
         <div class="az-signin-header">
-            <h3>Welcome Fur Parent</h3>
-            <h4>Register to Adopt a Pet</h4>
+            <h2>Welcome Fur Parent</h2>
+            <p>Register to Adopt a Pet</p>
 
             <form action="{{ route('register') }}" method="POST">
                 @csrf <!-- Generates CSRF token field -->
                 <div class="form-group">
 
                     <input type="text" class="form-control" name="name" id="name"
-                        placeholder="Name" maxlength="30">
+                        placeholder="Name" maxlength="30" required>
                 </div><!-- form-group -->
                 <div class="form-group">
                     <input type="email" class="form-control" name="email" id="email"
-                        placeholder="Email" maxlength="30">
+                        placeholder="Email" maxlength="40" required>
                 </div><!-- form-group -->
                 <div class="form-group">
                     <div class="input-group">
                         <input type="password" class="form-control" name="password" id="password"
-                            placeholder="Create a Password" maxlength="30">
+                            placeholder="Create a Password" maxlength="30" required>
                         <div class="input-group-append">
-                            <span class="input-group-text" id="togglePassword">
-                                <i class="fa fa-eye" aria-hidden="true" onclick="togglePasswordVisibility()"></i>
-                            </span>
                         </div>
                     </div><!-- input-group -->
                 </div><!-- form-group -->
                 <div class="form-group">
                     <div class="input-group">
                         <input type="password" class="form-control" name="password_confirmation"
-                            id="password_confirmation" placeholder="Confirm Password" maxlength="30">
-                        <div class="input-group-append">
-                            <span class="input-group-text" id="toggleConfirmPassword">
-                                <i class="fa fa-eye" aria-hidden="true" onclick="toggleConfirmPasswordVisibility()"></i>
-                            </span>
-                        </div>
-                    </div><!-- input-group -->
+                            id="password_confirmation" placeholder="Confirm Password" maxlength="30" required>
+                    </div>
                 </div><!-- form-group -->
                 <button type="submit" class="btn btn-az-primary btn-block">Register</button>
             </form>

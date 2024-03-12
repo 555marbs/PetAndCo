@@ -1,5 +1,10 @@
 body {
-    font-family: 'Fredoka One', cursive;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 
@@ -7,15 +12,13 @@ body {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    height: 105px;
+    height: 110px;
 }
 
 .az-signin-wrapper {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 70px; /* Adjust this value to move the form downwards */
+    background-color: #B19470; /* Adjust the color to match the image */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .az-card-signin {
@@ -29,40 +32,41 @@ body {
 }
 
 
-.az-signin-header h3 {
+.az-signin-header h2 {
     font-weight: 500;
-    color: #ffffff;
     text-align: center;
 }
 
-.az-signin-header h4 {
+.az-signin-header p {
     font-weight: 400;
-    color: #ffffff;
     text-align: center;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
 .az-signin-header .form-control {
     color: #000000;
     font-weight: 500;
     border-width: 2px;
-    border-color: #ffffff;
+    border-radius: 5px;
+    border-color: #775539;
+    background-color: #B19470 !important;
 }
 
 .az-signin-header .form-control:focus {
-    border-color: #b4bdce;
-    box-shadow: none;
+    border-color: #775539;
+    color: #000000;
+    background-color: #B19470 !important;
 }
 
 .az-signin-header .form-control::placeholder {
     font-weight: 400;
-    color: #97a3b9;
+    color: #000000;
 }
 
 .az-signin-header .btn {
     margin-top: 25px;
-    background-color: #a08a6e; /* Set default button background color */
-    color: #ffffff; /* Set default button text color */
+    background-color: #DED0B6; /* Set default button background color */
+    color: #000000; /* Set default button text color */
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
@@ -71,11 +75,12 @@ body {
 }
 
 .az-signin-header .btn:hover {
-    background-color: #8d7251; /* Change background color on hover */
+    background-color: #775539; /* Change background color on hover */
 }
 
 .az-signin-footer p {
     color: #292929;
+    text-align: center;
 }
 
 .az-signin-footer p:first-child {
@@ -93,5 +98,6 @@ body {
 
 .az-signin-footer a:hover,
 .az-signin-footer a:focus {
-    color: #000000;
+    color: #775539;
+    text-decoration: none;
 }
