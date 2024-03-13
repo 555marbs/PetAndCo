@@ -2,73 +2,82 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    app:cardCornerRadius="30dp"
-    android:padding="5dp"
-    android:layout_margin="5dp"
-    android:layout_width="380dp"
-    android:layout_height="350dp"
-    android:id="@+id/CardView">
+    android:id="@+id/CardView"
+    android:layout_width="280dp"
+    android:layout_height="250dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginLeft="30dp"
+    android:padding="0dp"
+    app:cardCornerRadius="17dp">
+
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="380dp"
-        android:layout_height="350dp"
-        android:background="@drawable/border"
+        android:layout_width="280dp"
+        android:layout_height="250dp"
+        android:background="@color/midbrown"
         tools:layout_editor_absoluteX="1dp">
 
         <ImageView
             android:id="@+id/CardViewImage"
-            android:layout_width="350dp"
-            android:layout_height="158dp"
-            android:src="@drawable/cat"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginBottom="140dp"
+            android:background="@drawable/rounded_corner_background"
+            android:scaleType="centerCrop"
+            android:src="@drawable/dogadopt"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.533"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.083" />
+            app:layout_constraintVertical_bias="0.0" />
 
         <TextView
             android:id="@+id/CardViewTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="12dp"
             android:fontFamily="sans-serif-condensed"
-            android:text="Pussy"
-            android:textSize="25sp"
+            android:text="Dog"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="@+id/CardViewDescription"
-            app:layout_constraintHorizontal_bias="0.029"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/CardViewDescription"
             app:layout_constraintTop_toBottomOf="@+id/CardViewImage" />
 
         <TextView
             android:id="@+id/CardViewDescription"
-            android:layout_width="333dp"
-            android:layout_height="24dp"
-            android:layout_marginTop="12dp"
+            android:layout_width="150dp"
+            android:layout_height="28dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="15dp"
             android:fontFamily="sans-serif-condensed"
             android:padding="2dp"
+            android:textColor="@color/white"
             android:text="Cat, (Felis catus)hahahahaha"
-            android:textSize="13sp"
-            app:layout_constraintBottom_toTopOf="@+id/btAdopt"
+            android:textSize="10sp"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="@+id/CardViewImage"
-            app:layout_constraintHorizontal_bias="0.47"
+            app:layout_constraintHorizontal_bias="0.062"
             app:layout_constraintStart_toStartOf="@+id/CardViewImage"
-            app:layout_constraintTop_toBottomOf="@+id/CardViewImage"
-            app:layout_constraintVertical_bias="0.72" />
+            app:layout_constraintTop_toBottomOf="@+id/CardViewTitle" />
 
         <Button
-            android:id="@+id/btAdopt"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="24dp"
-            android:background="@color/midbrown"
-            android:text="Adopt ME"
+            android:id="@+id/button"
+            android:layout_width="80dp"
+            android:layout_height="31dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="36dp"
+            android:background="@drawable/buttonadopt"
+            android:text="Adopt"
             android:textColor="@color/white"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/CardViewDescription"
-            app:layout_constraintHorizontal_bias="0.758"
-            app:layout_constraintStart_toStartOf="@+id/CardViewDescription" />
-
+            app:layout_constraintEnd_toEndOf="@+id/CardViewImage"
+            app:layout_constraintHorizontal_bias="0.567"
+            app:layout_constraintStart_toEndOf="@+id/CardViewDescription"
+            app:layout_constraintTop_toBottomOf="@+id/CardViewImage" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

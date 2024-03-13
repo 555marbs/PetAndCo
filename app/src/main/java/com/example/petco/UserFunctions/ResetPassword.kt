@@ -1,9 +1,10 @@
-package com.example.petco
+package com.example.petco.UserFunctions
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import com.example.petco.R
 
 class resetPassword : AppCompatActivity() {
 

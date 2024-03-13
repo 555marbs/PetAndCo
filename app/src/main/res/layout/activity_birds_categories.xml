@@ -12,9 +12,9 @@
         android:layout_width="300dp"
         android:layout_height="400dp"
         android:layout_marginTop="192dp"
-        android:layout_marginEnd="56dp"
         android:src="@drawable/birds"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <View
@@ -29,13 +29,13 @@
 
     <ImageView
         android:id="@+id/ivBackbtn"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         android:layout_marginStart="15dp"
         android:layout_marginTop="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/backbutton" />
+        app:srcCompat="@drawable/iconbackbutton" />
 
     <TextView
         android:id="@+id/tvCategoryBird"
@@ -43,10 +43,10 @@
         android:layout_height="100dp"
         android:gravity="center"
         android:text="
-Birds, belonging to the class Aves, are a diverse group of warm-blooded vertebrates characterized by feathers and, in most cases, the ability to fly. With over 10,000 known species, birds exhibit remarkable diversity in size, coloration, and behavior. They play crucial roles in ecosystems, contributing to pollination, seed dispersal, and pest control. Communication is often achieved through vocalizations and intricate songs, and some species display high levels of intelligence, problem-solving abilities, and social behaviors"
+Birds, belonging to the class Aves, are a diverse group of warm-blooded vertebrates characterized by feathers and, in most cases, the ability to fly. With over 10,000 known species, birds exhibit remarkable diversity in size, coloration, and behavior."
         app:layout_constraintBottom_toBottomOf="@+id/view"
         app:layout_constraintEnd_toEndOf="parent"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textStyle="bold"
         android:fontFamily="sans-serif-condensed"
         app:layout_constraintStart_toStartOf="@+id/view"
@@ -60,23 +60,23 @@ Birds, belonging to the class Aves, are a diverse group of warm-blooded vertebra
         android:layout_marginTop="19dp"
         android:text="Explore"
         android:textColor="@color/white"
-        android:background="@color/midbrown"
+        android:background="@drawable/button_selector"
         app:layout_constraintEnd_toEndOf="@+id/tvCategoryBird"
         app:layout_constraintStart_toStartOf="@+id/tvCategoryBird"
         app:layout_constraintTop_toBottomOf="@+id/tvCategoryBird" />
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="332dp"
+        android:layout_height="60dp"
         android:layout_marginTop="80dp"
         android:fontFamily="sans-serif-condensed"
         android:text="Welcome to the World of Birds!"
         android:textColor="@color/white"
-        android:textSize="30sp"
+        android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.619"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

@@ -7,27 +7,26 @@
     android:background="@color/brown"
     tools:context=".CATSCATEGORY.CatsCategories">
 
-
     <ImageView
         android:id="@+id/ivBackbtn"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="20dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/backbutton" />
+        app:srcCompat="@drawable/iconbackbutton" />
 
     <ImageView
         android:id="@+id/ivCat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.606"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintEnd_toEndOf="@+id/textView4"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintStart_toStartOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintVertical_bias="0.811"
         app:srcCompat="@drawable/catbackground" />
 
     <View
@@ -37,8 +36,9 @@
         android:background="@drawable/viewcorner"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent" />
+
     <TextView
         android:id="@+id/tvCategoryCat"
         android:layout_width="330dp"
@@ -47,8 +47,9 @@
         android:text="Cats, domesticated felines belonging to the Felidae family, captivate with their independent nature, agility, and mysterious charm. While they may exude an aloof demeanor, their affectionate purring and selective social interactions reveal a softer side that endears them to households worldwide. Retaining their innate hunting instincts, cats showcase impressive agility in capturing prey, highlighting their lineage as skilled predators"
         app:layout_constraintBottom_toBottomOf="@+id/view"
         app:layout_constraintEnd_toEndOf="parent"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textStyle="bold"
+        android:textSize="11sp"
         android:fontFamily="sans-serif-condensed"
         app:layout_constraintStart_toStartOf="@+id/view"
         app:layout_constraintTop_toTopOf="@+id/view"
@@ -60,7 +61,7 @@
         android:layout_marginTop="19dp"
         android:text="Explore"
         android:textColor="@color/white"
-        android:background="@color/midbrown"
+        android:background="@drawable/button_selector"
         app:layout_constraintEnd_toEndOf="@+id/tvCategoryCat"
         app:layout_constraintStart_toStartOf="@+id/tvCategoryCat"
         app:layout_constraintTop_toBottomOf="@+id/tvCategoryCat" />
@@ -69,13 +70,15 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="56dp"
         android:fontFamily="sans-serif-condensed"
         android:text="Welcome to the World of Cats!"
         android:textColor="@color/white"
-        android:textSize="30sp"
+        android:textSize="25sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/ivCat"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.265"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

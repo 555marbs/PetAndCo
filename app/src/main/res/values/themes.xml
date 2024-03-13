@@ -1,9 +1,9 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.PetCo" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    <style name="Base.Theme.PetCo" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Add this line to remove the title bar -->
+        <item name="windowNoTitle">true</item>
     </style>
 
-    <style name="Theme.PetCo" parent="Base.Theme.PetCo" />
+    <!-- Material Components styles -->
 </resources>

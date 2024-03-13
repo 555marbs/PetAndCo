@@ -42,7 +42,7 @@ class CatsExplore : AppCompatActivity() {
     private fun recylcerViewExplore() {
         var catexplore = CatsExploreDataClass("GUIDES", "Discover a whimsical world of cat guides, where playful insights into breeds, care routines, training secrets, health tips, gourmet nutrition",R.drawable.catcare,CatGuides::class.java)
         catsexploreLists.add(catexplore)
-        catexplore = CatsExploreDataClass("PET-FRIENDLY PLACES", "Discover a whimsical world of cat guides, where playful insights into breeds, care routines, training secrets, health tips, gourmet nutrition",R.drawable.catbackground,CatBreads::class.java)
+        catexplore = CatsExploreDataClass("Different Breads", "Discover a whimsical world of cat guides, where playful insights into breeds, care routines, training secrets, health tips, gourmet nutrition",R.drawable.catbackground,CatBreads::class.java)
         catsexploreLists.add(catexplore)
         catexplore = CatsExploreDataClass("GROMMING AND HYGIENE", "Discover a whimsical world of cat guides, where playful insights into breeds, care routines, training secrets, health tips, gourmet nutrition",R.drawable.catbackground,CatBreads::class.java)
         catsexploreLists.add(catexplore)

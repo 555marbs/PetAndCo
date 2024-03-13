@@ -2,7 +2,8 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="capucino">	#935618</color>
-    <color name="brown">#7E6363</color>
-    <color name="midbrown">#503C3C</color>
+    <color name="capucino">	#8d7251</color>
+    <color name="brown">#DED0B6</color>
+    <color name="midbrown">#a08a6e</color>
+    <color name="lightbrown">#B19470</color>
 </resources>

@@ -1,29 +1,59 @@
 package com.example.petco
-
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
+import android.widget.TextView
 import androidx.cardview.widget.CardView
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.example.petco.CATSCATEGORY.CatsCategories
+import com.google.android.material.bottomnavigation.BottomNavigationView
+import android.animation.ValueAnimator
 
 class ptHomePage : AppCompatActivity() {
-
-    private  var recyclerView:RecyclerView? = null
-    private  var recyclerViewHomepageAdapter: RecyclerViewHomePageAdapter? = null
-    private var ptList = mutableListOf<HomePageDataClass>()
 
     private lateinit var cvDog : CardView
     private lateinit var cvCat : CardView
     private lateinit var cvBird : CardView
     private lateinit var cvRabbit : CardView
 
+    var isHomePageActive = false
+    var isAdoptionActive = false
+    var isMyProfilesActive = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_pt_home_page)
+
+        val animatedText = findViewById<TextView>(R.id.pthomepagedescription)
+        val descriptionText = "Welcome to Pet&Co., where every animal holds a story and every story awaits a happy ending."
+        animatedText.animateText(descriptionText)
+
+        val bottomNavigation = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
+
+        bottomNavigation.setOnItemSelectedListener { menuItem ->
+            when (menuItem.itemId) {
+                R.id.home -> {
+                    true
+                }
+                R.id.Adoption -> {
+                    if (!isAdoptionActive) {
+                        val intent = Intent(this, AdoptionActivity::class.java)
+                        startActivityIfNeeded(intent, 0)
+                        isAdoptionActive = true
+                    }
+                    true
+                }
+                R.id.MyProfiles -> {
+                    if (!isMyProfilesActive) {
+                        val intent = Intent(this, MyProfiles::class.java)
+                        startActivityIfNeeded(intent, 0)
+                        isMyProfilesActive = true
+                    }
+                    true
+                }
+                else -> false
+            }
+        }
+
 
         cvCat = findViewById(R.id.cvCat)
         cvCat.setOnClickListener{
@@ -49,33 +79,21 @@ class ptHomePage : AppCompatActivity() {
         }
         cvRabbit = findViewById(R.id.cvRabbit)
         cvRabbit.setOnClickListener {
-            val int = Intent(this, RabbitCategories::class.java)
+            val int = Intent(this, FishCategories::class.java)
             startActivity(int)
             finish()
         }
-
-
-        ptList = ArrayList()
-        recyclerView = findViewById<View>(R.id.rvpthomepage) as RecyclerView
-        recyclerViewHomepageAdapter = RecyclerViewHomePageAdapter(this@ptHomePage, ptList)
-        val layoutManager: RecyclerView.LayoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
-        recyclerView!!.layoutManager = layoutManager
-        recyclerView!!.adapter = recyclerViewHomepageAdapter
-
-        recyclerHomePageVertical()
-
     }
 
-    private fun  recyclerHomePageVertical() {
-        var pet = HomePageDataClass("Cat british", "Cat, (Felis catus), domesticated member of the family Felidae",R.drawable.catcare)
-        ptList.add(pet)
-        pet = HomePageDataClass("Cat maine coon","Dog, (Felis catus), domesticated member of the family Felidae", R.drawable.catbackground)
-        ptList.add(pet)
-        pet = HomePageDataClass("Cat dog","Dog, (Felis catus), domesticated member of the family Felidae", R.drawable.rabbit)
-        ptList.add(pet)
-        pet = HomePageDataClass("Cat trin","Dog, (Felis catus), domesticated member of the family Felidae", R.drawable.dogcategory)
-        ptList.add(pet)
-        pet = HomePageDataClass("Cat bernardo","Dog, (Felis catus), domesticated member of the family Felidae", R.drawable.cat)
-        ptList.add(pet)
+    fun TextView.animateText(text: CharSequence, duration: Long = 100L) {
+        val textLength = text.length
+
+        val valueAnimator = ValueAnimator.ofInt(0, textLength)
+        valueAnimator.duration = duration * textLength
+        valueAnimator.addUpdateListener { animator ->
+            val animatedValue = animator.animatedValue as Int
+            this.text = text.subSequence(0, animatedValue)
+        }
+        valueAnimator.start()
     }
 }

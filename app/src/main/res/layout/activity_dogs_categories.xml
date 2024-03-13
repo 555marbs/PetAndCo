@@ -10,7 +10,7 @@
     <ImageView
         android:id="@+id/ivDogCategory"
         android:layout_width="350dp"
-        android:layout_height="500dp"
+        android:layout_height="450dp"
         android:layout_marginLeft="24dp"
         android:src="@drawable/dogcategory"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -32,13 +32,13 @@
 
     <ImageView
         android:id="@+id/ivBackbtn"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         android:layout_marginStart="15dp"
         android:layout_marginTop="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/backbutton" />
+        app:srcCompat="@drawable/iconbackbutton" />
 
     <TextView
         android:id="@+id/tvCategoryDog"
@@ -48,7 +48,7 @@
         android:text="Dogs are domesticated mammals known for their loyalty, companionship, and diverse roles in human society. They belong to the Canidae family and have been selectively bred for various purposes, resulting in a wide range of breeds with distinct characteristics."
         app:layout_constraintBottom_toBottomOf="@+id/view"
         app:layout_constraintEnd_toEndOf="parent"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textStyle="bold"
         android:fontFamily="sans-serif-condensed"
         app:layout_constraintStart_toStartOf="@+id/view"
@@ -62,7 +62,7 @@
         android:layout_marginTop="19dp"
         android:text="Explore"
         android:textColor="@color/white"
-        android:background="@color/midbrown"
+        android:background="@drawable/button_selector"
         app:layout_constraintEnd_toEndOf="@+id/tvCategoryDog"
         app:layout_constraintStart_toStartOf="@+id/tvCategoryDog"
         app:layout_constraintTop_toBottomOf="@+id/tvCategoryDog" />
@@ -74,14 +74,14 @@
         android:fontFamily="sans-serif-condensed"
         android:text="Welcome to the World of Dogs!"
         android:textColor="@color/white"
-        android:textSize="30sp"
+        android:textSize="23sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/ivDogCategory"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintHorizontal_bias="0.576"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.866" />
+        app:layout_constraintVertical_bias="0.78" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

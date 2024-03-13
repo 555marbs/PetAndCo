@@ -3,21 +3,21 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/cvCatsExplore"
     android:padding="5dp"
-    android:layout_margin="5dp"
-    app:cardCornerRadius="30dp"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="28dp"
     android:layout_width="match_parent"
     app:cardElevation="8dp"
-    android:layout_height="205dp">
+    android:layout_height="180dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="205dp"
-        android:background="@color/brown">
+        android:layout_height="180dp"
+        android:background="@color/midbrown">
 
         <View
             android:id="@+id/view"
-            android:layout_width="165dp"
-            android:layout_height="170dp"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
@@ -32,6 +32,7 @@
             android:layout_height="150dp"
             android:layout_marginStart="4dp"
             app:layout_constraintBottom_toBottomOf="@+id/view"
+            app:layout_constraintEnd_toEndOf="@+id/view"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="1.0"
@@ -39,32 +40,36 @@
 
         <TextView
             android:id="@+id/tvCatTitle"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
+            android:layout_width="160dp"
+            android:layout_height="20dp"
             android:layout_marginStart="185dp"
             android:fontFamily="sans-serif-condensed"
             android:text="PET-FRIENDLY PLACES"
             android:textColor="@color/white"
-            android:textSize="20sp"
+            android:textSize="15sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@id/ivCatsImage"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.285"
             app:layout_constraintStart_toStartOf="@id/ivCatsImage"
             app:layout_constraintTop_toTopOf="@+id/view"
             app:layout_constraintVertical_bias="0.0" />
 
         <TextView
             android:id="@+id/tvCatDescription"
-            android:layout_width="200dp"
-            android:layout_height="90dp"
+            android:layout_width="180dp"
+            android:layout_height="100dp"
             android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
             android:text="Discover a whimsical world of cat guides, where playful insights into breeds, care routines, training secrets, health tips, gourmet nutrition"
             android:textColor="@color/white"
+            android:textSize="10sp"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/tvCatTitle"
+            app:layout_constraintHorizontal_bias="0.268"
             app:layout_constraintStart_toEndOf="@+id/view"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.612" />
+            app:layout_constraintTop_toBottomOf="@+id/tvCatTitle"
+            app:layout_constraintVertical_bias="0.432" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
